@@ -1,0 +1,11 @@
+<!--distribution/LIST/LIST.wxml-->
+<view class='noke' wx:if="{{list.length==0}}">暂无购买记录</view>
+ <view wx:if="{{list.length>0}}" wx:for="{{list}}" class='flx footer'>
+    <view class='center'>
+      <image class='imgT' mode='widthFix' src='{{item.Users.AvatarUrl}}'></image> {{item.Name}}
+    </view>
+    <view class='center fooar'>
+     总交易金额<text class='Green'>¥{{item.Price}}</text>
+    </view>
+  </view>
+<loading hidden="{{hidden}}">加载中...</loading>

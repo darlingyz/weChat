@@ -1,0 +1,156 @@
+/* pages/index/index.wxss */
+
+.userinfo {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.userinfo-avatar {
+  width: 149rpx;
+  height: 149rpx;
+  /* margin-left: 40%; */
+  border-radius: 50%;
+  margin-top: 40rpx;
+}
+
+.spa {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.outer-Bao {
+  margin-top: 20rpx;
+  width: 100%;
+  border-top: 1px solid #e3e3e3;
+}
+
+.MyBao {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 34rpx;
+  height: 87rpx;
+  text-indent: 25rpx;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.center-a {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  color: #767676;
+  height: 100%;
+}
+
+.baoimg {
+  width: 16rpx;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+}
+
+.in-top {
+  margin-bottom: 20rpx;
+}
+
+.success {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 26rpx;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #f9f9f9;
+}
+
+.top {
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: white;
+  position: relative;
+}
+
+.center {
+  width: 94%;
+  height: 85%;
+  margin: auto;
+  position: relative;
+}
+
+.se_imh {
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+  width: 64rpx;
+  z-index: 999;
+  height: 65rpx;
+}
+
+.image {
+  width: 280rpx;
+}
+
+.cen_right {
+  height: 100%;
+  margin-left: 3%;
+  float: left;
+}
+
+.cen_r1 {
+  width: 100%;
+  float: left;
+  font-size: 33rpx;
+  margin-bottom: 1%;
+  word-wrap: break-word;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 94rpx;
+}
+
+.cen_r2 {
+  color: #4eba4e;
+  font-size: 38rpx;
+  margin-top: 3%;
+  font-weight: bold;
+  float: left;
+  width: 100%;
+  height: 45rpx;
+}
+
+.cen_r2 label {
+  text-decoration: line-through;
+  color: #ababab;
+  font-size: 25rpx;
+  font-weight: normal;
+}
+
+.contar-footer {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 38rpx;
+}
+
+.contar-footer view {
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 34rpx;
+  padding-left: 25rpx;
+}
+
+.contar-footer image {
+  width: 15rpx;
+  float: right;
+  margin-top: 30rpx;
+  margin-right: 29rpx;
+}

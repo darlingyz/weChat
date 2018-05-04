@@ -1,0 +1,44 @@
+/* pages/shouru/shouru.wxss */
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  padding:20rpx 30rpx;
+  align-items: center;
+  -webkit-align-items: center;
+   -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaeaea;
+  background-color: white;
+}
+.top{
+  font-size:35rpx;
+  width:450rpx;
+  margin-bottom:15rpx;
+  line-height:37rpx;
+  height:70rpx;
+}
+.bto{
+  font-size: 30rpx;
+   color: #b2b2b2;
+   height:36rpx;
+}
+.yanse{
+  
+  color:#4e4;
+}
+.size{
+font-size: 45rpx;
+}
+.scroll{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.noke{
+  width: 100%;
+  text-align: center;
+  margin-top: 60%;
+  color: #ababab;
+}

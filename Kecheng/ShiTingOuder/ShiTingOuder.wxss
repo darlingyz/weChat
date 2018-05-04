@@ -1,0 +1,103 @@
+/* Ouder.wxss */
+.outer{
+  display: flex;display: -webkit-flex;
+  background-color: #fff;
+  padding-top:26rpx;
+  border-bottom: 1px solid #e3e3e3;
+  width: 100%;
+}
+.image{
+  height: 164rpx;
+  width: 280rpx;
+  margin-right: 30rpx;
+}
+.content{
+  font-size: 33rpx;
+  position: relative;
+   height: 70rpx; 
+}
+.num{
+  position: absolute;
+  right:0;
+  color:#b2b2b2;
+  top:67rpx;
+}
+.price{
+  font-size: 36rpx;
+  margin-top: 12rpx;
+}
+.befor{
+  font-size: 25rpx;
+  color:#b2b2b2;
+  margin-top: 6rpx;
+}
+.outer-left{
+  width: 42%;
+  margin-left:4%;
+  margin-bottom:14rpx;
+}
+.outer-right{
+  margin-bottom: 34rpx;
+  width: 48%;
+}
+.middle{
+  margin-top: 20rpx;
+  border-top:1px solid #e3e3e3;
+}
+.middle-top{
+  display: flex;display: -webkit-flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  padding:0 4%;
+  border-bottom: 1px solid #e3e3e3;
+}
+.middle-top input{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size:32rpx;
+}
+.zhanwei{
+  width: 180rpx;
+  font-size:34rpx;
+}
+.fukuama{
+  margin-top: 20rpx;
+  width:94%;
+}
+.shij{
+   font-size:34rpx;
+   width:40%;
+}
+.fukuama{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.footer{
+  display: flex;display: -webkit-flex;
+  height: 109rpx;
+  line-height: 109rpx;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.footer-left{
+  font-size: 34rpx;
+  width: 60%;
+  text-align: right;
+  padding-right: 39rpx;
+}
+.footer-right{
+  width: 100%;
+  text-align: center;
+  font-size: 37rpx;
+  line-height: 108rpx;
+  border:none;
+  border-radius: 0;
+  height: 108rpx;
+}
+button::after{
+  content: none;
+}

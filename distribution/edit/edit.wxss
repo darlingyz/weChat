@@ -1,0 +1,97 @@
+/* distribution/edit/edit.wxss */
+.imgs{
+  width: 282rpx;
+  margin-right: 32rpx;
+}
+.middlle{
+  padding:28rpx 30rpx 20rpx 30rpx;
+  background-color: #fff;
+}
+.title{
+  font-size: 30rpx;
+}
+.Speacl{
+  flex: 1;
+  -webkit-flex: 1;
+}
+.detail{
+  font-size: 24rpx;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.JieGou{
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.detail view{
+  width: 50%;
+}
+.ShouJia{
+  color: #ababab;
+}
+.Detail-to{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  font-size: 24rpx;
+  color: #4a4a4a;
+  height: 52rpx;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.footer{
+  padding:25rpx 30rpx;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #e7e7e7;
+}
+.SheZhi{
+  font-size: 30rpx;
+  height: 78rpx;
+  margin:0 auto;
+  background-color: #fff;
+  border:1px solid #e0e0e0;
+  padding: 0 20rpx;
+}
+.last{
+  background-color: #fefae8;
+  padding:10rpx 30rpx 20rpx 30rpx;
+}
+.YongJin{
+  text-align: right;
+  font-size: 24rpx;
+  margin-top: 21rpx;
+}
+.Yanse{
+  color: #4eba4e;
+}
+.Dingwei{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.Dingwei view:first-child{
+  width: 60%;
+  background-color: #fff;
+  text-align: right;
+  color: #4eba4e;
+  font-size: 30rpx;
+  padding-right: 20rpx;
+}
+.Dingwei view:last-child{
+  width: 40%;
+  background-color: #4eba4e;
+  text-align: center;
+  color: #fff;
+}
+.input{
+width: 115rpx;
+  height:78rpx;
+  text-align: right;
+  padding-left: 15rpx;
+}
+.Spe-in{
+  align-items: center;
+  -webkit-align-items: center;
+}

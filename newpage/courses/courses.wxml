@@ -1,0 +1,17 @@
+<!--newpage/redCourse/redCourse.wxml-->
+<view>
+<view class='wuwu' hidden='{{list.length!=0}}'>暂无优惠课程</view>
+<view wx:for="{{list}}" class='bg-white outer-middle' data-cid='{{item.Id}}' bindtap='xiangxi'>
+  <view>
+    <view class='middle-img' style='background:url({{item.img}}) no-repeat;background-size:100% 100%;height:{{imgHeight}}px'></view>
+  </view>
+  <view class='title'>{{item.title}}</view>
+  
+  <view class=' RedBao'>
+  <view class='price'><text>¥{{item.price}}</text><text class='OriginalPrice'></text></view>
+  <image mode='widthFix' class='money-img' src='{{item.imgbg}}'></image>
+        <view class='allred'>已抵扣¥{{item.money}}元</view>
+        <view>原价:<text class='YangShi'>{{item.Oprice}}</text></view>
+  </view>
+</view>
+</view>

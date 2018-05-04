@@ -1,0 +1,40 @@
+<!--distribution/Apply/Apply.wxml-->
+<image class='imgs' mode='' src='{{fenxiao}}'></image>
+<view class='flx outer bg-white'>
+  <view class='left'>
+    <view>1<text class='Sea'>/</text>如何成为分销员?</view>
+    <view>输入姓名和手机号,点击底部按钮【申请成为分销员】申请提交给管理员，管理员审核通过后即可成为分销员。</view>
+  </view>
+  <view class='right'>
+    <image class='yuanFen' mode='widthFix' src='{{yuanfen}}'></image>
+  </view>
+</view>
+<view class='flx outer bg-white'>
+  <view class='left'>
+    <view>2<text class='Sea'>/</text>如何赚取佣金？</view>
+    <view>推广机构的分销课程给微信好友、微信群、朋友圈等,朋友每成交一笔订单，将享受订单课程的佣金返利。</view>
+  </view>
+  <view class='right'>
+    <image class='yuanFen' mode='widthFix' src='{{kafen}}'></image>
+  </view>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view class='botm'>
+    <view class='title flx'><view class='xian'></view>分销员申请</view>
+    <view class='flx xinMin '>
+      <view>姓名</view>
+      <input value='{{nn}}' class='name' name="name" disabled='{{neng}}'></input>
+    </view>
+     <view class='flx xinMin '>
+      <view>手机</view>
+      <input value='{{pp}}' type='number' class='name' name="phone" disabled='{{neng}}'></input>
+    </view>
+  </view>
+
+  <button formType="submit" class='btn' hidden='{{!ISshen}}'>申请成为分销员</button>
+  <button class='btn' hidden='{{ISshen}}'>审核中</button>
+</form>
+<loading hidden="{{hidden}}">
+  加载中...
+ </loading>

@@ -1,0 +1,7 @@
+<!--distribution/EWei/EWei.wxml-->
+<view class='outer'>
+  <view>
+    <image bindtap='FangDa' class='imgs' mode='widthFix' src='{{img}}'></image>
+  </view>
+  <view class='title'>点击二维码长按保存分享给微信好友、微信群、朋友圈</view>
+</view>

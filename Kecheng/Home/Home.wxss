@@ -1,0 +1,204 @@
+/* Kecheng/Home/Home.wxss */
+page {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+}
+.navbar {
+  height: 88rpx;
+  flex: none;
+  -webkit-flex: none;
+  display: flex;
+  display: -webkit-flex;
+  background: #fff;
+  font-size: 32rpx;
+  border-bottom: 1px solid #e8e6eb;
+}
+.navbar .item {
+  width: 15%;
+  position: relative;
+  flex: auto;
+  -webkit-flex: auto;
+  text-align: center;
+  line-height: 86rpx;
+}
+.navbar .item.active {
+  color: #4eba4e;
+}
+.navbar .item.active:after {
+  display: block;
+  height: 4rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background: #4eba4e;
+}
+.swiper-tem {
+  background-color: #fff;
+  height: 197rpx;
+  margin: 20rpx 0;
+}
+.DinWei {
+  padding: 30rpx 11rpx;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.Se-img {
+  height: 77rpx;
+  width: 77rpx;
+  border-radius: 50%;
+  margin-bottom: 5rpx;
+}
+.align-center {
+  text-align: center;
+}
+.outer-Hj {
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.img-Hj {
+  width: 100%;
+  height: 400rpx;
+}
+.dingWEi-Hj {
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  width: 80rpx;
+}
+.zhe {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.4);
+}
+.kanjiaa {
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.baiseku {
+  height: 55rpx;
+  width: 70rpx;
+  text-align: center;
+  background-color: #fff;
+  display: inline-block;
+  line-height: 55rpx;
+  color: #2b2b2b;
+  border-radius: 10rpx;
+}
+.title-Hj {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  font-size: 36rpx;
+  line-height: 44rpx;
+}
+.botom-Hj {
+  padding-left: 30rpx;
+  align-items: center;
+  -webkit-align-items: center;
+  padding-bottom: 16rpx;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  padding-right: 30rpx;
+}
+.Price-Hj {
+  font-size: 42rpx;
+  color: #4eba4e;
+}
+.YuanJ-Hj {
+  color: #ababab;
+  font-size: 26rpx;
+}
+.throught-Hj {
+  text-decoration: line-through;
+}
+.PingTuan{
+  width: 96%;
+  margin:auto;
+  margin-top:20rpx;
+}
+.AnNiu-Hj{
+  min-width: 193rpx;
+  height: 73rpx;
+  color:#fff;
+  text-align: center;
+  line-height: 73rpx;
+  border-radius: 10rpx;
+  background-color: #4eba4e;
+  font-size: 35rpx;
+  margin-right: 20rpx;
+}
+.ceshia{
+  margin-top: -20rpx;
+  margin-left: 5rpx;
+}
+.top-top{
+  height: 400rpx;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+   display: flex;
+   display: -webkit-flex;
+   -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.mid-btn{
+    width: 210rpx;
+    height: 83rpx;
+    line-height: 83rpx;
+    background-color: #ffaa15;
+    color:#fff;
+    border-radius: 10rpx;
+    text-align: center;
+    font-size: 32rpx;
+}
+.pro-pro{
+  padding: 0 30rpx;
+  font-size: 20rpx;
+  color:#ababab;
+}
+progress{
+  border-radius: 10rpx;
+}
+.pro-btn{
+   -webkit-justify-content: space-between;
+  justify-content: space-between;
+  display: flex;
+  display: -webkit-flex;
+  margin-bottom: 18rpx;
+  margin-top: 8rpx;
+}
+.pro-green{
+  color:#4eba4e;
+}
+.RedBao{
+  font-size: 24rpx;
+  color:#ababab;
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -webkit-flex;
+  padding-bottom: 15rpx;
+}
+.money-img{
+  width: 37rpx;
+  margin-top:4rpx;
+}
+.wu{
+  width:100%;
+  height:50rpx;
+  float:left;
+  text-align:center;
+  margin-top:50%;
+  color:#7d7d7d;
+}

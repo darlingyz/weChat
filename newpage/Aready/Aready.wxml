@@ -1,0 +1,68 @@
+<view class='outer' style='background-color:{{mm.BackgroundColor}};min-height:{{imgHeight}}px;'>
+
+<view bindtap='OpenModelTwo' class='detal'>活动规则</view>
+<view class=''>
+  <image src='{{backimg}}' mode='widthFix' class='outer-top'></image>
+</view>
+
+
+
+  <view class='OuterAll'>
+      <view class='time Specla'>{{mm.StartTime}} 至 {{mm.EndTime}}</view>
+
+
+      <view class='outer-middle' hidden='{{!wanbi}}'>
+        <view class='top-Gua'>恭喜您，已经瓜分红包</view>
+        <view class='mil-mid'>
+        
+            <view class='left-l'>¥<text>{{myprice}}</text><view class='dian'></view><view class='dian2'></view></view>
+            <view class='right-r'>{{mm.Title}}</view>
+        </view>
+        <view class='button'>
+          <button hidden='{{dian==0}}' bindtap='zaichai'>再拆一个红包</button>
+          <button hidden='{{dian==0}}' bindtap='kecheng'>立即使用</button>
+        </view>
+      </view>
+
+      <view class='outer-middle' hidden='{{wanbi}}' style='min-height:180px;'>
+        <view class='top-Gua'>您来晚了，该红包已经瓜分完毕</view>
+        <view class='button'>
+          <button bindtap='zaichai' style='margin-top:80rpx;'>再拆一个红包</button>
+        </view>
+      </view>
+
+      <view class='outer-middle two-middle'>
+        <view class='top-Gua'>看好友手气</view>
+
+          <view class='flx top-pinLun all-pin' wx:for="{{headlist}}" style='font-size:32rpx;'>
+              <view class='flx top-pinLun'>
+                    <view class='img-mid dingWei' style='background:url({{item.im}}) no-repeat; background-size:100% 100%'>
+                      
+                    </view>
+                    <view>{{item.name}}</view>
+              </view>
+              <view>
+                <view class='renmingbi'>{{item.pric}}元</view>
+                <view class='ZuijiaW' hidden='{{item.huang}}'>
+                <image class='ZuiJia' src='{{huang}}' mode='widthFix'></image>手气最佳
+                </view>
+              </view>
+          </view>
+
+      </view>
+  </view>
+</view>
+
+<view hidden='{{modelTwo}}' class='model-two'>
+  <view class='two-mid'>
+    <view><image class='img-two' src='{{xian}}' mode='widthFix'></image>活动规则<image class='img-two img-right' src='{{xian2}}' mode='widthFix'></image></view>
+    <view>1、用户可邀请好友共同拆红包，满人则拆红包成功，共同瓜分相应金额的红包，每人获得红包金额随机；其中随机一人将获得“手气最佳红包”。</view>
+    <view>2、每个红包发起后{{mm.WaitTime}}小时未组满即失败，无红包奖励。</view>
+
+<view>3、活动期间，帮助同一用户只可拆一次，但发起红包次数不限。</view>
+  <view>4、发起拆红包的用户需在该红包满人拆成功后或逾期失败后，才可再发起拆下一个红包。</view>
+  </view>
+<view class='icon'>
+      <icon bindtap='CloseModelTwo'  type="cancel" color='rgba(255,255,255,0.8)' size="40"/>
+     </view>
+</view>

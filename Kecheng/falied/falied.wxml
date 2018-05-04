@@ -1,0 +1,26 @@
+<!--falied.wxml-->
+<view class="top" bindtap="kecheng">
+  <view class="center">
+    <text class="cen_img" style="background-image: url('{{img}}');"></text>
+    <view class="cen_right">
+      <view class="cen_r1">{{title}}
+        <!-- <image class="imagebg" src="../../images/groupsuccess_03.png"></image> -->
+      </view>
+
+      <view class="cen_r2">¥{{gprice}}
+        <label>¥{{oprice}}</label>
+      </view>
+      <!-- <view class="cen_r3">
+        <text>省¥{{sprice}}</text>
+      </view> -->
+    </view>
+  </view>
+</view>
+<view style="color:#9f9f9f" class="top-last" hidden='{{model.Course.Type==4}}'>
+  退款完成
+</view>
+<view class="footer">
+  <view class="footer-top" hidden='{{model.Course.Type==4}}'>很遗憾拼团失败</view>
+  <view class="footer-top" hidden='{{model.Course.Type!=4}}'>很遗憾砍价失败</view>
+  <view bindtap="shouye" class="footer-bottom white bg-green">去首页逛逛</view>
+</view>

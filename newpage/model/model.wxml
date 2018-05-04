@@ -1,0 +1,9 @@
+<!--newpage/model/model.wxml-->
+<view class='outer'>
+  <view class='outer-top'style='background:url({{card}}) no-repeat;background-size:100%;height:85%;'>
+    <view class='content-middle'>
+      <!-- <view class='footer-la'>保存课程卡在上课时出示</view> -->
+      <view bindtap='baocun' class='btn'>保存课程卡</view>
+    </view>
+  </view>
+</view>

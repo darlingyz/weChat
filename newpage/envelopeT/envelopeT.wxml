@@ -1,0 +1,97 @@
+<!--newpage/envelope/envelope.wxml-->
+<view class='outer'>
+
+
+  <view style='background:url({{imgbg}}) no-repeat; background-size:100% 100%' class='outer-top'>
+    <view bindtap='OpenModelTwo' class='detal'>活动规则</view>
+    <view>
+      <view class='Juan'>{{mm.Price}}元
+        <text class='Juana'>优惠券</text>
+      </view>
+      <view class='time'>{{mm.StartTime}} 至 {{mm.EndTime}}</view>
+    </view>
+  </view>
+
+  <view class='outer-middle'>
+    <view hidden='{{!ismycoupons}}'>
+      <view class='people' hidden='{{sstatus!=1}}'>
+        邀请{{sheng}}人助力，即可领取课程优惠券
+      </view>
+      <view class='people' hidden='{{sstatus!=2}}'>
+        已有
+        <text style='color:#ce4031'>{{mm.CouponsSplits.CouponsSplits_Users.length}}</text>人帮您助力,继续努力哦！
+      </view>
+      <view class='people' hidden='{{sstatus!=3}}'>
+        已有
+        <text style='color:#ce4031'>{{mm.CouponsSplits.CouponsSplits_Users.length}}</text>人帮您助力,恭喜您成功获得课程优惠券！
+      </view>
+    </view>
+    <view class='people' hidden='{{ismycoupons}}'>
+      <view hidden='{{sstatus!=2}}'>
+        您已帮
+        <text style='color:#ce4031'>{{cname}}</text>助力,邀请好友帮TA继续助力吧！
+      </view>
+      <view hidden='{{sstatus!=4}}'>
+        您已帮
+        <text style='color:#ce4031'>{{cname}}</text>助力,您的好友已成功领取优惠券
+      </view>
+      <view hidden='{{sstatus!=3}}'>
+        <text style='color:#ce4031'>{{cname}}</text>已有{{mm.CouponsSplits.CouponsSplits_Users.length}}位好友助力,TA已成功领取优惠券！
+      </view>
+    </view>
+    <view class='img-all'>
+      <view class='big' wx:for="{{headlist}}">
+        <view bindtap='TextShow' class='img-mid' style='background:url({{item.im}}) no-repeat; background-size:100% 100%'></view>
+      </view>
+    </view>
+    <view class='people FondKen' bindtap='chakan'>
+      查看优惠券课程
+      <image mode='widthFix' class='JianZZTou' src='{{jiantou}}'></image>
+    </view>
+    <view class='button' hidden='{{!ismycoupons}}'>
+      <button hidden='{{wancheng}}' open-type="share">邀请好友助力</button>
+      <button hidden='{{!wancheng}}' bindtap='OpenModel' style='background-color:#ce4031;'>领取课程优惠券</button>
+      <button hidden='{{!yiling}}'>您已领取课程优惠券</button>
+    </view>
+    <view class='button' hidden='{{ismycoupons}}'>
+      <button open-type="share" hidden='{{wancheng}}'>邀请好友帮TA助力</button>
+      <button bindtap='kainew'>我也要领课程优惠券</button>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view hidden='{{!model}}' class='model'>
+  <view style='background:url({{bgRed}}) no-repeat;background-size:100% 100%' class='model-mid'>
+    <view>{{mm.Price}}元优惠券</view>
+    <view class='MyYouHui'>优惠券已放入“我的优惠券”</view>
+    <view>
+      <button bindtap='shiyong'>立即使用</button>
+    </view>
+  </view>
+  <view class='icon'>
+    <icon bindtap='CloseModel' type="cancel" color='rgba(255,255,255,0.8)' size="40" />
+  </view>
+</view>
+
+
+<view hidden='{{!modelTwo}}' class='model-two'>
+  <view class='two-mid'>
+    <view>
+      <image class='img-two' src='{{xian}}' mode='widthFix'></image>活动规则
+      <image class='img-two img-right' src='{{xian2}}' mode='widthFix'></image>
+    </view>
+    <view>1、用户参与领取课程优惠券并邀请好友助力，满人则助力成功，免费获得课程优惠券。</view>
+    <view>2、领取课程优惠券后可以在优惠券课程中使用并抵扣相应金额。</view>
+    <view>3、活动期间，课程优惠券只能领取一次。</view>
+  </view>
+  <view class='icon'>
+    <icon bindtap='CloseModelTwo' type="cancel" color='rgba(255,255,255,0.8)' size="40" />
+  </view>
+</view>
+
+<!-- <view hidden='{{setmine}}' class='ShoZi'>
+  你已帮他拆过红包
+</view> -->

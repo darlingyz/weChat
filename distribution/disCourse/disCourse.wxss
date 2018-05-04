@@ -1,0 +1,68 @@
+/* distribution/disCourse/disCourse.wxss */
+.nav{
+  height: 119rpx;
+  align-items: center;
+
+  -webkit-align-items: center;
+
+}
+.nav .nav-top:last-child{
+   border-right: 0;
+}
+.nav-top{
+  width: 25%;
+ text-align: center;
+ font-size: 30rpx;
+ border-right: 1rpx solid #e0e0e0;
+ height: 77rpx;
+}
+.Jin{
+  font-size: 24rpx;
+  margin-bottom: 15rpx;
+  margin-top: 4rpx;
+  color: #ababab;
+}
+.imgs{
+  width: 282rpx;
+  margin-right: 32rpx;
+}
+.middlle{
+  padding:28rpx 30rpx 20rpx 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.title{
+  font-size: 30rpx;
+}
+.detail{
+  font-size: 24rpx;
+  color:#4eba4e;
+  justify-content: space-between;
+     -webkit-justify-content: space-between;
+
+}
+.JieGou{
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.s-dis{
+  flex: 1;
+-webkit-flex: 1;
+}
+.detail view{
+  width: 50%;
+}
+.ShouJia{
+  color: #ababab;
+}
+.detail .btn{
+  width: 130rpx;
+  height: 44rpx;
+  padding:0;
+  line-height: 44rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #4eba4e;
+  text-align: center;
+  border-radius: 10rpx;
+}

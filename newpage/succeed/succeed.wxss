@@ -1,0 +1,59 @@
+/* newpage/succeed/succeed.wxss */
+page{
+  background-color: #fff;
+}
+.img{
+  width: 240rpx;
+  display: block;
+  margin:52rpx auto 52rpx auto;
+}
+.content{
+  text-align: center;
+  padding: 0 93rpx;
+}
+.succed{
+  font-size: 48rpx;
+  margin-bottom: 29rpx;
+}
+.neirong{
+  font-size: 30rpx;
+  color:#5a5a5a;
+  margin-bottom: 52rpx;
+  line-height: 45rpx;
+}
+.middle{
+   padding: 0 93rpx;
+}
+.inutt-all{
+  height: 83rpx;
+  line-height: 83rpx;
+  border:1px solid #e5e5e5;
+  border-radius: 10rpx;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+.xinming{
+  line-height: 83rpx;
+  font-size: 28rpx;
+}
+input{
+  height: 100%;
+}
+.images{
+  width: 25rpx;
+  margin-left: 23rpx;
+  margin-right: 13rpx;
+}
+.xian{
+  width: 30%;
+  height: 10rpx;
+  background-color: #eee;
+}
+.xian-all{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-bottom: 44rpx;
+}
+button{
+  margin-bottom: 27rpx;
+}

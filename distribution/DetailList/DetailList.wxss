@@ -1,0 +1,74 @@
+/* distribution/DetailList/DetailList.wxss */
+.imgs{
+  width: 282rpx;
+  margin-right: 32rpx;
+}
+.middlle{
+  padding:28rpx 30rpx 20rpx 30rpx;
+  background-color: #fff;
+}
+.title{
+  font-size: 30rpx;
+}
+.detail{
+  font-size: 24rpx;
+  color:#4eba4e;
+  justify-content: space-between;
+
+  -webkit-justify-content: space-between;
+}
+.specal{
+  flex: 1;
+  -webkit-flex: 1;
+}
+.JieGou{
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+}
+.detail view{
+  width: 50%;
+}
+.ShouJia{
+  color: #ababab;
+}
+.imgT{
+  width: 69rpx;
+  margin-right: 27rpx;
+  border:1px solid #e0e0e0;
+}
+.phone{
+  width: 26rpx;
+  margin-right: 18rpx;
+}
+.foo{
+  margin-top: 20rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+}
+.footer{
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 110rpx;
+}
+.center{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+   -webkit-align-items: center;
+}
+.footer{
+  font-size: 30rpx;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+    padding: 0 30rpx;
+}
+.DingSHi{
+  margin-top: 20rpx;
+  padding: 0 30rpx;
+  padding-bottom: 20rpx;
+}
+.DingSHi view{
+  margin-bottom: 15rpx;
+}

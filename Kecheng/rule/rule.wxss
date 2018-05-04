@@ -1,0 +1,14 @@
+/* rule.wxss */
+page{
+  background-color: #fff;
+  font-size: 26rpx;
+  padding:40rpx 16rpx;
+  line-height: 40rpx;
+}
+.title{
+  font-size: 30rpx;
+}
+.content{
+  margin-bottom: 30rpx;
+  width: 94%;
+}

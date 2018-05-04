@@ -1,0 +1,28 @@
+<!--newpage/succeed/succeed.wxml-->
+<view><image mode='widthFix' class='img' src='{{tutu}}'></image></view>
+
+
+<view class='content'>
+  <view class='succed'>恭喜答题正确</view>
+  <view class='neirong' style='margin-bottom:0rpx;'>您已免费获得【{{title}}】</view>
+  <view class='neirong'>请填写您的个人信息领取课程</view>
+</view>
+<view class='middle'>
+  <view class='inutt-all flx'>
+    <image class='images' mode='widthFix' src='{{tt1}}'></image>
+    <input placeholder-class='xinming' placeholder='填写姓名' value="{{name}}" bindinput="nameput"></input>
+  </view>
+   <view class='inutt-all flx'>
+    <image class='images' mode='widthFix' src='{{tt2}}'></image>
+    <input type="number" placeholder-class='xinming' placeholder='填写手机号码' value="{{phone}}"bindinput="phoneput"></input>
+  </view>
+  <view class='flx xian-all'>
+    <view class='xian'></view>
+    <view class='xian'></view>
+    <view class='xian'></view>
+  </view>
+  <view>
+      <button bindtap='linqu' class='bg-green white '>领取课程</button>
+      <button open-type="share" class='bg-white green bo-green'>分享好友答题赢课</button>
+    </view>
+</view>

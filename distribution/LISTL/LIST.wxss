@@ -1,0 +1,40 @@
+/* distribution/LIST/LIST.wxss */
+.footer{
+  align-items: center;
+  -webkit-align-items: center;
+   -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 110rpx;
+}
+.center{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.footer{
+  font-size: 30rpx;
+  border-bottom: 1px solid #e0e0e0;
+    padding: 0 30rpx;
+    background-color: #fff;
+}
+.imgT{
+  width: 69rpx;
+  margin-right: 27rpx;
+  border:1px solid #e0e0e0;
+}
+.Green{
+  color:#4eba4e;
+  display: inline-block;
+  margin-left: 15rpx;
+}
+.fooar{
+  font-size: 24rpx;
+  color: #ababab;
+}
+.noke{
+  width: 100%;
+  text-align: center;
+  margin-top: 60%;
+  color: #ababab;
+}

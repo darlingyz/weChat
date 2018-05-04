@@ -1,0 +1,98 @@
+<view hidden='{{!XiaJia}}'>
+  <import src="../../wxParse/wxParse.wxml" />
+  <view style="width:100%;height:{{imgHeight}}px;float:left;">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+      <block wx:for="{{movies}}" wx:for-index="index">
+        <swiper-item>
+          <text style="background-image:url({{item.url}}); height: 100%;width: 100%;background-repeat:round;float:left;" mode="aspectFill"></text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="shijian" style="background-image: url('{{tu.a}}');display:none;">
+    <lable>
+      <!-- {{clock}} {{micro_second}} -->
+    </lable>
+  </view>
+  <view class="content">
+    <view class="con_01">{{title}}</view>
+    <view class="con_02">{{jie}}</view>
+    <view class="con_03">已有{{groupcount}}人参与</view>
+    <view class="con_04">¥{{gprice}}
+      <label>原价:¥{{oprice}}</label>
+      <view>{{ccount}}人团</view>
+    </view>
+  </view>
+  <view class="canlist">
+    <view bindtap="detial" class="can_01">支付开团邀请{{ccountmin}}人参团,人数不足自动退款
+      <label>详细规则</label>
+      <text style="background-image: url('{{tu.b}}');"></text>
+    </view>
+    <view class="can_02" hidden="{{group.length<1}}">以下小伙伴正在发起拼团,您可以直接参与:</view>
+    <view class="can_03" wx:for="{{group}}">
+      <view class="can03_img" style="background-image:url({{item.im}});">
+      </view>
+      <view class="can03_name">{{item.name}}</view>
+      <view class="can03_right">
+        <text style="color:#4eba4e;margin-top:2%;">还剩{{item.co}}人成团</text>
+        <text style="color:#ababab;margin-top:-7rpx">截止时间:</text>
+        <text style="color:#ababab;width:100%;margin-top:-8rpx;text-align:center;">{{item.et}}</text>
+      </view>
+      <view hidden='{{item.zhu}}' class="can03_end" data-id="{{item.id}}" data-co="{{item.co}}" bindtap="cantuan"> 去参团</view>
+    </view>
+  </view>
+  <view class="tu">
+    <view class="shuoming" style="margin-top:2%;">课程简介</view>
+    <!-- <view class="jianjie">{{miao}}</view> -->
+    <video hidden='{{shiping==""}}' src="{{shiping}}" controls style='width:100%;height:500rpx;margin-bottom:15px;'></video>
+    <view class='jianjie'>
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+
+      <!-- <view>
+   <image wx:for="{{dlise}}" src='{{item.PicturePath}}' style='width:100%;'></image>
+  </view> -->
+    </view>
+
+  </view>
+  <view hidden="{{addrephone}}" class="didian">
+    <view class="shuoming" style="margin-top:2%;">上课地点</view>
+    <view class="didian_view" bindtap='dizhi'>
+      <text class="daohang" style="background-image: url('{{tu.c}}');"></text>{{address}}</view>
+    <view class="didian_view" bindtap='zixun'>
+      <text class="shouji" style="background-image: url('{{tu.d}}');"></text>{{phone}}</view>
+  </view>
+  <!-- <view class="goumai">
+<view class="shuoming" style="margin-top:2%;display:none;">购买须知</view>
+<view class="xuzhi" style='display:none;'>该内容为虚拟内容服务,如有疑问请点击左下角"咨询"按钮内容和供应商沟通后购买。
+</view>
+</view> -->
+  <view style='width:100%;height:130rpx;float:left;'></view>
+
+  <view class="guding">
+    <view class="gun1" bindtap="fanhui">
+      <text style="background-image: url('{{tu.e}}');"></text>
+    </view>
+    <view class="gun2" bindtap="zixun">
+      <text style="background-image: url('{{tu.f}}');"></text>
+    </view>
+    <view class="gun4" data-kid="{{kid}}" data-types="1" bindtap="{{yu}}">
+      <text class="gun_text" style="margin-top:5%;">¥{{gprice}}</text>
+      <text class="gun_text">{{ccount}}人拼团</text>
+    </view>
+    <view class="gun3" data-kid="{{kid}}" data-types="0" bindtap="{{yu}}">
+      <text class="gun_text" style="margin-top:6%;">¥{{rprice}}</text>
+      <text class="gun_text">单独购买</text>
+    </view>
+  </view>
+</view>
+
+<view hidden='{{XiaJia}}'>
+  <view>
+    <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+  </view>
+  <view class='baoqian'>抱歉，该课程已下架，
+    <text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<view class="top" bindtap="kecheng">
+  <view class="center">
+    <text class="cen_img" style="background-image: url('{{img}}');"></text>
+    <view class="cen_right">
+      <view class="cen_r1">{{title}}</view>
+      <view class="cen_r2">¥{{gprice}}
+        <label>¥{{oprice}}</label>
+      </view>
+      <!-- <view class="cen_r3">
+        <text>省¥{{sprice}}</text>
+      </view> -->
+    </view>
+  </view>
+</view>
+<view class="outer-middle">
+  <view class="max">
+  <view class="triangle-up"></view>
+  <view class="center_c">
+    <view class="cen_1" hidden='{{ucount!=0}}'>恭喜您，拼团成功！</view>
+  <view class="cen_1" hidden='{{ucount==0}}'>还差<label>{{ucount}}</label>人，快喊小伙伴一起拼团吧</view>
+  <view class="cen_time" hidden='{{ucount==0}}'>{{clock}}</view>
+  <view class="cen_ren">
+    <view class="ren_max1">
+        <image class="tuan-img" src="{{MaxavatarUrl}}"></image>
+      <view>团长</view>
+    </view>
+    <view class="ren_max" wx:for="{{yuan}}">
+      <image class="dengdai" src="{{item.im}}"></image>
+    </view>
+  </view>
+  </view>
+  <view class="last">
+    <!-- <button >我要参团</button> -->
+    <button type="primary" open-type="share" hidden='{{ucount==0}}'>分享给好友来拼团</button>
+    <button bindtap="fan" class="fanBtn" hidden='{{ucount==0}}'>返回首页</button>
+    <button bindtap="fan" class="fanBtn" hidden='{{ucount!=0}}' style='background-color:#4eba4e;color:white;'>去首页逛逛</button>
+  </view>
+  </view>
+</view>
+<view class="pingtuan">
+  <view class="pingtuan-top">
+    <view class="xian">
+        课程吧拼团
+    </view>
+   
+  </view>
+   <view class="piantuan-footer">
+      <view class="detail-left">支付开团邀请{{ucount}}人参团，人数不足自动退款</view> 
+      <view class="xiangxiguize" bindtap='xiang'>
+        详细规则
+        <image class="jiao" mode="widthFix" src="{{jiao}}"></image>
+      </view>
+   </view>
+</view>

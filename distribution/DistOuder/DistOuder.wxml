@@ -1,0 +1,48 @@
+<!--Ouder.wxml-->
+<view class="outer" bindtap='kecheng'>
+  <view class="outer-left">
+    <image class="image" src="{{img}}"></image>
+  </view>
+  <view class="outer-right">
+    <view class="content">
+      {{title}}
+      <view class="num"></view>
+    </view>
+
+    <view class="price green">
+      ¥{{gp}}
+    </view>
+    <view class="befor">
+      原价: ¥
+      <text>{{op}}</text>
+    </view>
+  </view>
+</view>
+<form bindsubmit="formSubmit" report-submit bindreset="formReset">
+  <view class="middle">
+    <view class="classname">
+      <view class="middle-top">
+        <view class="zhanwei">姓名：</view>
+        <input name="Name" placeholder="请输入姓名" value="{{name}}" />
+      </view>
+      <view class="middle-top">
+        <view class="zhanwei">手机号：</view>
+        <input type="number" name="Phone" placeholder="请输入手机号" value="{{pphone}}" />
+      </view>
+      <view class="middle-top">
+        <view class="zhanwei">年龄：</view>
+        <input type="number" name="Age" placeholder="请输入年龄(选填)" />
+      </view>
+      <view class="middle-top">
+        <view class="zhanwei">备注：</view>
+        <input name="Remark" placeholder="说些什么(选填)"/>
+      </view>
+      <view class="classname" style="float:right;margin-right:4%;"></view>
+    </view>
+
+    <view class="footer">
+      <view class="footer-left green">实付款: ¥{{gp}}</view>
+      <button formType="submit" class="footer-right bg-green white">提交订单</button>
+    </view>
+  </view>
+</form>

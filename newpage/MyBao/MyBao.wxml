@@ -1,0 +1,50 @@
+<!--newpage/MyBao/MyBao.wxml-->
+<view class='flx outer-top center' bindtap='kecheng'>
+  <view class='center'>
+    <image class='img-top' src='{{yichai}}' mode='widthFix'></image>
+    <text>红包余额</text>
+    <text class='money'>¥{{redTotal}}</text>
+  </view>
+  <view class='center'>
+    去使用
+    <image class='img-r' src='{{jiao}}' mode='widthFix'></image>
+  </view>
+</view>
+
+<view class='outer-middle'>
+  <view class='top-title'>红包记录</view>
+  <view class='wuwu' wx:if='{{redPockets.length<=0}}'>暂无红包记录</view>
+  <view wx:if='{{redPockets.length>0}}'>
+    <view wx:for="{{redPockets}}" wx:key='{{item.esid}}' hidden='{{item.esid==undefined}}'>
+      <view class='flx bg-white I-con' data-esid="{{item.esid}}" data-types="{{item.types}}" data-copenid='{{item.copenid}}' data-rid='{{item.rid}}' bindtap='xiangxi'>
+        <view>
+          <image class='boliang' src='{{xiantiao}}'></image>
+        </view>
+        <view class='content-l flx'>
+
+          <view>
+            <image mode='widthFix' class='img-mid S-imh-mid' src='{{item.baoimg}}'></image>
+          </view>
+          <view class='l-r'>
+            <view class='xianzhi'>{{item.rem}}</view>
+            <view>{{item.jiren}}</view>
+
+          </view>
+        </view>
+        <view class='content-r center'>
+          <view class='dian'></view>
+          <view class='dian2'></view>
+          <view hidden='{{item.yao}}' class='YaoQin'>邀请好友</view>
+          <view>
+            <view hidden='{{item.rema}}' class='YaoQinRen'>
+              <text class='rmb'>¥</text>{{item.myprice}}</view>
+            <view hidden='{{item.ZuiJia}}' class='zuiJiaS'>手气最佳</view>
+            <view hidden='{{item.ShiXiao}}'>
+              <image class='img-shixiao' mode='widthFix' src='{{shixiao}}'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

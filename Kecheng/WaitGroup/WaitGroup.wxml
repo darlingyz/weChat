@@ -1,0 +1,32 @@
+<view class="top" bindtap="kecheng">
+  <view class="center">
+    <text class="cen_img" style="background-image:url('{{maxurl}}')"></text>
+    <view class="cen_right">
+      <view class="cen_r1">{{text}}</view>
+      <view class="cen_r2">¥{{pric}}
+        <label>¥{{befor}}</label>
+      </view>
+      <!-- <view class="cen_r3">
+        <text>省¥{{sheng}}</text>
+      </view> -->
+    </view>
+  </view>
+</view>
+<view class="outer-middle">
+  <view class="max">
+  <view class="triangle-up"></view>
+  <view class="center_c">
+  <view class="cen_1">还差<label>{{cha}}</label>人成团</view>
+  <view class="cen_time">{{clock}}</view>
+  <view class="cen_ren">
+    <view class="ren_max1" wx:for="{{arry}}">
+        <image class="tuan-img" src="{{item.Users.AvatarUrl}}"></image>
+      <view hidden="{{item.show}}" >团长</view>
+    </view>
+    <view class="ren_max" wx:for="{{lls}}">
+      <image class="dengdai" src="{{item.uu}}"></image>
+    </view>
+  </view>
+  </view>
+  </view>
+</view>

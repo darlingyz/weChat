@@ -1,0 +1,35 @@
+<!--newpage/MyBao/MyBao.wxml-->
+<view>
+
+
+  <view class='outer-middle'>
+  <view class='wuwu' hidden='{{list.length!=0}}'>暂无可用优惠券</view>
+    <view wx:for="{{list}}" data-csid='{{item.csid}}' data-price='{{item.price}}' data-status='{{item.status}}' bindtap='shiyong'>
+      <view class='flx bg-white I-con'>
+      <view>
+          <image  class='boliang' src='{{item.img}}'></image>
+        </view>
+        <view class='content-l centera flx'>
+        
+          <view class='centera {{item.huise}} centeraa'><text class='youmo'>¥</text>{{item.price}}</view>
+          <view class='l-r'>
+            <view class='xianzhi'>{{item.title}}</view>
+            <view>{{item.st}} - {{item.et}}</view>
+            <view hidden='{{item.yao}}'><progress  percent="100" backgroundColor="#ffcfab" color="#ff7321"></progress></view>
+            <view hidden='{{item.yao}}' class='allqiang'>已抢100%</view>
+          </view>
+        </view>
+        <view class='content-r center'>
+        <view class='dian'></view>
+        <view class='dian2'></view>
+         <view hidden='{{item.yao}}' class='YaoQin'>立即领取</view>
+         <view><image hidden='{{item.rema}}'  src='{{yl}}' mode='widthFix' class='yilingaa'></image></view>
+          <view hidden='{{item.rema}}'  class='YaoQin Aqushi'>去使用</view>
+        <view>
+            <view hidden='{{item.ShiXiao}}'><image class='img-shixiao' mode='widthFix' src='{{item.imgAll}}'></image></view>
+        </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--distribution/Incomedetails/Incomedetails.wxml-->
+<view class='flx nav'>
+  <view class='top'>
+    <text class='ErDu'>营业额(元)</text>
+    <text>{{list.countprice}}</text>
+  </view>
+  <view class='top top2'>
+    <text class='ErDu'>订单总数</text>
+    <text>{{Zong}}</text>
+  </view>
+</view>
+
+<view class='noke' wx:if="{{list.list.length==0}}">暂无营收明细</view>
+<view  wx:if="{{list.list.length>0}}"class='bg-white ma-top' wx:for="{{list.list}}">
+    <view class='flx nat-top'>
+      <view class='spe'>
+        <image class='imgss' mode='widthFix' src='{{tutu}}'></image>{{item.Name}}
+      </view>
+      <view class='time'>{{item.CreateOn}}</view>
+    </view>
+
+<view bindtap='QuKanMin' data-id='{{item.Id}}' class='flx middlle'>
+  <view>
+    <image mode='widthFix' class='imgs' src='{{url}}{{item.Course.PicturePath}}'></image>
+  </view>
+  <view class='Specal-s'>
+    <view class='title'>{{item.Course.Title}}</view>
+    <view class='flx detail JieGou'>
+      <view><text class='ShouJia'>售价:</text>￥{{item.Price}}</view>
+      <view><text class='ShouJia'>佣金:</text>￥{{item.ZhuanPrice}}</view>
+    </view>
+  </view>
+</view>
+
+</view>
+
+<loading hidden="{{hidden}}">加载中...</loading>

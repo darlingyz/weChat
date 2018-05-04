@@ -1,0 +1,137 @@
+@import"../Threebargaining/Threebargaining";
+@import "../../wxParse/wxParse.wxss";
+.sanjiao {
+   left: 40.5%;
+}
+.saojiaoa{
+  left: 75%;
+}
+.xiaokuangk{
+  display: inline-block;
+  height: 38rpx;
+  width: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  border-radius: 10rpx;
+  border:1px solid #ccc;
+}
+.greena{
+  color:#4e4;
+}
+
+
+.fenxiangaaa{
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51,51,51,0.8);
+  z-index:100;
+}
+
+.fenxunaa{
+  width: 604rpx;
+  height: 1000rpx;
+  margin:50rpx auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  position: relative;
+}
+.pexi{
+  font-size: 37rpx;
+  color:#fff;
+  margin-top: 42rpx;
+  margin-bottom: 34rpx;
+}
+.fenxunaa-top{
+  height: 368rpx;
+  border-radius: 10rpx 10rpx 0 0;
+  overflow: hidden;
+}
+.big9{
+  font-size: 48rpx;
+}
+.lingxinga{
+    width:416rpx;
+    font-size: 24rpx;
+    margin:0 auto;
+    margin-top: 50rpx;
+}
+.imgsew{
+  width: 306rpx;
+  margin-top: 41rpx;
+  margin-bottom: 28rpx;
+}
+.woyaojiuyua{
+  width: 378rpx;
+  font-size: 26rpx;
+  margin:0 auto;
+  margin-top: 56rpx;
+  color:#646464;
+}
+.changan{
+  font-size: 26rpx;
+  color:#8d8d8d;
+  margin-top: 34rpx;
+}
+.changana{
+  font-size: 24rpx;
+  color:#8d8d8d;
+}
+.haibaoaa{
+  position: absolute;
+  height: 105rpx;
+  line-height: 105rpx;
+  font-size: 42rpx;
+  width: 343rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  left: 133rpx;
+  bottom: -50rpx;
+}
+.flex{
+  display: flex;
+  display: -webkit-flex;
+  margin:auto;
+}
+.image-las{
+  width: 57rpx;
+}
+.seal{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  box-sizing: border-box;
+  border-left: 1px solid #fff;
+}
+.chacha{
+  position:absolute;
+  left:270rpx;
+  bottom:-70px;
+  color:#fff;
+  border:2px solid #fff;
+  width:60rpx;
+  height:60rpx;
+  font-size:55rpx;
+  border-radius:40rpx;
+  text-align:center;
+  line-height:50rpx;
+}
+
+.img{
+  width: 200rpx;
+  margin:206rpx auto 64rpx auto;
+  display: block;
+}
+.baoqian{
+  font-size: 30rpx;
+  text-align: center;
+}
+.shouYe{
+  color: #4eba4e;
+}

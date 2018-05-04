@@ -1,0 +1,65 @@
+<view hidden='{{!XiaJia}}'>
+<import src="../../wxParse/wxParse.wxml" />
+<view style="width:100%;height:{{imgHeight}}px;float:left;">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <text style="background-image:url({{item.url}}); height: 100%;width: 100%;background-repeat:round;float:left;" mode="aspectFill"></text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="shijian" style="background-image: url('{{tu.a}}');display:none;">
+  <lable>
+    <!-- {{clock}} {{micro_second}} -->
+  </lable>
+</view>
+<view class="content">
+  <view class="con_01">{{title}}</view>
+  <view class='con_04'><image mode='widthFix' class='money-img' src='{{youhui}}'></image>
+    ¥{{gprice}}
+    <label>原价:¥{{oprice}}</label>
+  </view>
+</view>
+
+<view class="tu">
+  <view class="shuoming" style="margin-top:2%;">课程简介</view>
+  <video hidden='{{shiping==""}}' src="{{shiping}}" controls style='width:100%;height:500rpx;margin-bottom:15px;'></video>
+  <view class='jianjie'>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>
+
+<view hidden="{{addrephone}}" class="didian">
+  <view class="shuoming" style="margin-top:2%;">上课地点</view>
+  <view class="didian_view" bindtap='dizhi'>
+    <text class="daohang" style="background-image: url('{{tu.c}}');"></text>{{address}}</view>
+  <view class="didian_view" bindtap='zixun'>
+    <text class="shouji" style="background-image: url('{{tu.d}}');"></text>{{phone}}</view>
+</view>
+<view style='width:100%;height:130rpx;float:left;'></view>
+
+<view class="guding">
+  <view class="gun1" bindtap="fanhui">
+    <text style="background-image: url('{{tu.e}}');"></text>
+  </view>
+  <view class="gun2" bindtap="zixun">
+    <text style="background-image: url('{{tu.f}}');"></text>
+  </view>
+  <view class="gun4" data-kid="{{kid}}" bindtap="{{yu}}">
+    <text class="gun_text">立即抢购</text>
+  </view>
+</view>
+
+</view>
+
+<view hidden='{{XiaJia}}'>
+  <view>
+    <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+  </view>
+  <view class='baoqian'>抱歉，该课程已下架，
+    <text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--distribution/edit/edit.wxml-->
+<view  class='flx middlle'>
+  <view>
+    <image mode='widthFix' class='imgs' src='{{url}}{{list.model.Course.PicturePath}}'></image>
+  </view>
+  <view class='Speacl'>
+    <view class='title'>{{list.model.Course.Title}}</view>
+    <view class='flx detail JieGou'>
+      <view><text class='ShouJia'>{{count}}人在分销</text></view>
+    </view>
+  </view>
+</view>
+
+<view class='bg-white footer'>
+  <view class='flx Detail-to'>
+    <view>原价</view>
+    <view>¥{{list.model.Course.OriginalPrice}}</view>
+  </view>
+  <view class='flx Detail-to'>
+    <view>代理价</view>
+    <view>¥{{DaiLi}}</view>
+  </view>
+  <view class='flx Detail-to'>
+    <view>建议售价</view>
+    <view>¥{{list.model.Course.RetailPrice}}</view>
+  </view>
+</view>
+<view class='last'>
+  <view class='flx SheZhi Detail-to'>
+    <view>设置售价</view>
+    <view class='flx Spe-in'>¥ <input bindinput="ShuRu" type='number' value='{{ShouJia}}' class='input'></input>  </view>
+  </view>
+  <view class='YongJin'>佣金<text class='Yanse'> ¥{{SHouJIa}}</text></view>
+</view>
+
+<view class='Dingwei flx'>
+  <view>售价：¥{{ShouJia}}</view>
+  <view bindtap='BaoCun'>保存</view>
+</view>
+
+<loading hidden="{{hidden}}">加载种...</loading>

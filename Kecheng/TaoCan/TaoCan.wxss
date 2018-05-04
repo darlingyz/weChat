@@ -1,0 +1,455 @@
+@import "../../wxParse/wxParse.wxss";
+@import "../Home/Home.wxss";
+page{
+    background-color: #efeff4;
+    /* overflow: hidden; */
+}
+.swiper {
+ height: 100%;
+ width: 100%;
+}
+.swiper image {
+ height: 100%;
+ width: 100%;
+ background-repeat: no-repeat;
+}
+.shijian{
+    width: 100%;
+    height: 73rpx;
+    float: left;
+    background-repeat: round;
+}
+.shijian lable{
+    font-size: 26rpx;
+    color: #ffffff;
+    width: 62%;
+    height: 70%;
+    float: right;
+    margin-top:3%;
+}
+.content{
+    width: 100%;
+    float: left;
+    background-color: white;
+    border-bottom: 1px solid #d1d0d4;
+}
+.con_01{
+    width:94%;
+    margin:auto;
+    font-weight:bold;
+    margin-top:3%;
+    margin-bottom:2.5%;
+    font-size:45rpx;
+    line-height:50rpx;
+}
+.con_02{
+    width:94%;
+    margin:auto;
+    font-size:33rpx;
+    color:#4c4c4c;
+    margin-bottom:1%;
+    padding: 0% 3%;
+}
+.con_03{
+    width:94%;
+    margin:auto;
+    color:#bebebe;
+    text-align:right;
+    font-size:28rpx;
+    margin-top:6rpx; 
+    padding: 0% 3%;
+}
+.con_04{
+    width:94%;
+    margin:auto;
+    font-weight:bold;
+    margin-top:0.4%;
+    font-size:45rpx;
+    color:#4eba4e;
+    height:50rpx;
+    float: left;
+    padding: 0% 3%;
+    margin-bottom:30rpx;
+}
+.con_04 label{
+    text-decoration:line-through;
+    color:#ababab;
+    font-size:30rpx;
+    margin-left:2%;
+    font-weight:normal;
+}
+.con_04 view{
+    float:right;
+    font-size:25rpx;
+    font-weight:normal;
+    width:13%;
+    height:75%;
+    background-color:#bef0be;
+    border-radius:7rpx;
+    line-height:40rpx;
+    text-align:center;
+    margin-top:1.4%;
+    overflow: hidden;
+}
+.canlist{
+  float:left;
+  width:100%;
+  background-color:white;
+  margin-top:3%;
+  border-bottom:1px solid #d1d0d4;
+  border-top:1px solid #d1d0d4;
+}
+.can_01{
+  width:94%;
+  height:60rpx;
+  margin:auto;
+  margin-top:30rpx;
+  font-size:28rpx;
+  color:#4c4c4c;
+}
+.can_01 label{
+    margin-left: 5%;
+    color: #ababab;
+}
+.can_01 text{
+    width: 2%;
+    height: 52%;
+    background-repeat: round;
+    float: right;
+    margin-top: 0.3%;
+    margin-right: 2%;
+}
+.can_02{
+    width:94%;
+    height:50rpx;
+    margin:auto;
+    margin-top:10rpx;
+    font-size:26rpx;
+    color:#4c4c4c;
+    border-top:1px solid #d1d0d4;
+    padding-top:18rpx;
+    padding-bottom:10rpx;
+}
+.can_03{
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    background-color: #f9f9f9;
+    margin-bottom: 4%;
+}
+.can03_img{
+    width: 10.2%;
+    height: 75%;
+    float: left;
+    background-repeat: round;
+    border-radius: 50rpx;
+    margin-top: 1.5%;
+    margin-left: 3%;
+}
+.can03_name{
+    font-size: 30rpx;
+    float: left;
+    margin-top: 4%;
+    margin-left: 3%;
+    width: 180rpx;
+}
+.can03_right{
+    width: 270rpx;
+    height: 100%;
+    float: left;
+    font-size: 27rpx;
+    margin-left: 1%;
+    overflow: hidden;
+}
+.can03_right text{
+    width: 100%;
+    height: 40%;
+    float: left;
+    text-align:center;
+}
+.can03_end{
+    width: 120rpx;
+    height: 100%;
+    float: right;
+    background-color: #4eba4e;
+    color: white;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.tu{
+    width: 100%;
+    float: left;
+    background-color: white;
+    margin-top: 3%;
+    border-bottom: 1px solid #d1d0d4;
+    border-top: 1px solid #d1d0d4;
+    padding-bottom:35rpx;
+}
+.shuoming{
+    width: 90%;
+    height: 50rpx;
+    margin: auto;
+    border-left: 3px solid #4eba4e;
+    font-size: 39rpx;
+    line-height: 50rpx;
+    padding-left: 2%;
+    margin-bottom:30rpx;
+}
+/* .tu_1{
+    width: 94%;
+    height: 350rpx;
+    margin: auto;
+    background-repeat: round;
+    margin-top: 40rpx;
+}
+.tu_2{
+    width: 94%;
+    height: 250rpx;
+    margin: auto;
+    background-repeat: round;
+    margin-top: 10rpx;
+}
+.tu_3{
+    width: 94%;
+    height: 250rpx;
+    margin: auto;
+    background-repeat: round;
+    margin-top: 70rpx;
+}
+.tu_4{
+    width: 94%;
+    height: 500rpx;
+    margin: auto;
+    background-repeat: round;
+    margin-top: 10rpx;
+}
+.tu_5{
+    width: 94%;
+    height: 400rpx;
+    margin: auto;
+    background-repeat: round;
+    margin-top: 60rpx;
+} */
+.didian{
+    width: 100%;
+    height: 250rpx;
+    float: left;
+    background-color: white;
+    margin-top: 3%;
+    border-bottom: 1px solid #d1d0d4;
+    border-top: 1px solid #d1d0d4;
+}
+.didian_view{
+    width: 88%;
+    height: 20%;
+    margin: auto;
+    font-size: 30rpx;
+    margin-top: 3%;
+}
+.daohang{
+    width: 7%;
+    height: 100%;
+    margin: auto;
+    background-repeat: round;
+    float: left;
+    margin-right: 2%;
+}
+.shouji{
+    width: 5%;
+    height: 100%;
+    margin: auto;
+    background-repeat: round;
+    float: left;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.goumai{
+    width: 100%;
+    /* height: 300rpx; */
+    float: left;
+    background-color: white;
+    margin-top: 3%;
+    /* border-bottom: 1px solid #d1d0d4;
+    border-top: 1px solid #d1d0d4; */
+    margin-bottom: 130rpx;
+}
+.xuzhi{
+    font-size: 30rpx;
+    width: 94%;
+    height: 90%;
+    margin: auto;
+    margin-top: 4%;
+    line-height: 50rpx;
+}
+.guding{
+    width: 100%;
+    height: 105rpx;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    border-top: 1px solid #d1d0d4;
+    z-index:100;
+}
+.gun1{
+    width: 15%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #d1d0d4;
+}
+.gun1 text{
+    width: 43%;
+    height: 62%;
+    display: block;
+    background-repeat: round;
+    margin: auto;
+    margin-top: 17%;
+}
+.gun2{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.gun2 text{
+    width: 43%;
+    height: 62%;
+    display: block;
+    background-repeat: round;
+    margin: auto;
+    margin-top: 17%;
+}
+.gun3{
+    width: 35%;
+    height: 100%;
+    float: right;
+    background-color: #bef0be;
+    color: #4eba4e;
+}
+.gun4{
+    width: 69%;
+    height: 100%;
+    float: right;
+    background-color: #4eba4e;
+    color: #ffffff;
+}
+.gun_text{
+    width: 100%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 30rpx;
+    line-height: 100rpx;
+}
+.jianjie{
+  width: 94%;
+  margin: auto;
+  font-size:35rpx;
+}
+.jieshu{
+  color:white;
+  font-size:26rpx;
+  float:right;
+  line-height:75rpx;
+  margin-right:4%;
+}
+.pro-btn{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  display: flex;
+  display: -webkit-flex;
+  margin-bottom: 18rpx;
+  margin-top: 8rpx;
+}
+.pro-green{
+  color:#4eba4e;
+}
+progress{
+  border-radius: 10rpx;
+}
+.pro-pro{
+  padding: 0 30rpx;
+  font-size: 20rpx;
+  color:#ababab;
+}
+.fenxiang::after{
+  background-color:#bef0be;
+  color:#4eba4e;
+  font-size:28rpx;
+  width:100%;
+  padding:0rpx;
+  height:100%;
+  line-height:92rpx;
+}
+.teshu{
+  background-color:#bef0be;
+  color:#4eba4e;
+  font-size:30rpx;
+  width:100%;
+  padding:0rpx;
+  height:100%;
+  line-height:100rpx;
+}
+.teshu::after{
+  border: 0px;
+}
+
+.img{
+  width: 200rpx;
+  margin:206rpx auto 64rpx auto;
+  display: block;
+}
+.baoqian{
+  font-size: 30rpx;
+  text-align: center;
+}
+.shouYe{
+  color: #4eba4e;
+}
+.RedBao{
+  /* padding:0rpx 30rpx; */
+  font-size: 24rpx;
+  color:#ababab;
+  align-items: center;
+   -webkit-align-items: center;
+  display: flex;
+  display: -webkit-flex;
+  padding-bottom: 15rpx;
+}
+.money-img{
+  width: 37rpx;
+  margin-top:4rpx;
+}
+/*houJia  */
+.JiangXiao{
+  padding:10rpx 30rpx;
+}
+.Tao-j{
+  height:36rpx;
+  width:36rpx;
+  line-height:40rpx;
+  text-align:center;
+  margin-right:10rpx;
+  float:left;
+  font-size:26rpx;
+}
+.cc001{
+  width:94%;
+  font-size:30rpx;
+  margin:auto;
+}
+.baohan{
+  width:100%;
+  text-align:center;
+  margin-top:36rpx;
+  margin-bottom:20rpx; 
+  float:left;
+  font-size:32rpx;
+  font-weight: none;
+}
+.PingTuan{
+  width: 92%;
+  float:left;
+  margin-left: 4%;
+  margin-top:20rpx;
+}

@@ -1,0 +1,19 @@
+<!--pages/shouru/shouru.wxml-->
+<view class="noke" hidden="{{list.length>0}}">收入明细为空</view>
+<view wx:for="{{list}}"  class='flex'>
+  <view>
+    <view class='top'>{{item.Remark}}</view>
+    <view class='bto'>{{item.CreateOn}}</view>
+  </view>
+
+  <view wx:if="{{item.Type==1}}" class='green  size'>
+    +{{item.Price}}
+  </view>
+
+  <view wx:else class='size'>
+    -{{item.Price}}
+  </view>
+</view>
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>

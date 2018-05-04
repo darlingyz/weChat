@@ -1,0 +1,72 @@
+<view hidden='{{!XiaJia}}'>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='bg-white'>
+  <swiper autoplay="{{true}}" indicator-dots="{{true}}" indicator-active-color="#fff" style="height:{{imgHeight}}px;">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{url}}{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class="content">
+    <view class="con_01">{{list.modle.Title}}</view>
+    <view class="con_04">¥{{list.modle.GroupPrice}}
+      <label>原价:{{list.modle.OriginalPrice}}</label>
+    </view>
+  </view>
+</view>
+<view class="tu">
+<view class="shuoming" style="margin-top:2%;">课程介绍</view>
+  <video hidden='{{shiping==""}}' src="{{shiping}}" controls style='width:100%;height:500rpx;margin-bottom:15px;'></video>
+
+<view class='jianjie'>
+  <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view> 
+</view>
+
+</view>
+<view hidden="{{addrephone}}" class="didian">
+<view class="shuoming" style="margin-top:2%;">上课地点</view>
+<view class="didian_view" bindtap='dizhi'>
+  <image class='imga imgaa' mode='widthFix' src='{{didian}}'></image>
+{{list.modle.Address}}</view>
+<view class="didian_view" bindtap='zixun'>
+<image class='imga imgab' mode='widthFix' src='{{shouji}}'></image>
+{{list.modle.Phone}}</view>
+</view>
+
+<view wx:if="{{JIangXIaoS}}" class='last'>
+  <view bindtap='QuBianJi' class='ls-btn'>编辑</view>
+  <view data-ma='{{list.modle.QuickMarkPath}}' bindtap='ErWeiMa' class='ls-btn erw'>二维码</view>
+  <button open-type="share" class='ls-btn erw'>去推广</button>
+</view>
+
+ 
+
+
+ <view wx:if="{{!JIangXIaoS}}"  class="guding">
+    <view class="gun1" bindtap="fanhui">
+    <text style="background-image: url('{{tu.e}}');"></text>
+    </view>
+    <view class="gun2" bindtap="zixun">
+    <text style="background-image: url('{{tu.f}}');"></text>
+    </view>
+    <view class="gun4 white" bindtap="goumai">
+    立即购买
+    </view>
+</view>
+</view>
+
+
+<view hidden='{{XiaJia}}'>
+  <view>
+  <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+</view>
+<view class='baoqian'>抱歉，该课程已下架，<text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text></view>
+</view>
+<loading hidden="{{hidden}}">
+  加载中...
+ </loading>

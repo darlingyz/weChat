@@ -1,0 +1,26 @@
+<!--rule.wxml-->
+<view class="classname" style='width:100%;'>
+  <view class="title">一、拼团有效期</view>
+  <view class="content">
+    拼团有效期是自开团时刻起{{time}}小时内，如果距离活动结束时间小于{{time}}小时，则以活动结束时间为准。
+
+  </view>
+  <view class="title">
+    二、拼团成功
+  </view>
+  <view class="content">
+    拼团有效期内，支付的用户达到参团人数，则拼团成功。
+  </view>
+  <view class="title">
+    三、拼团失败
+  </view>
+  <view class="content">
+    拼团有效期后，未达成相应参团人数的团，则该团失败。拼团失败的订单，系统会在1-7个工作日内处理退款，系统处理后1-10个工作日内原路退回至原支付账户中。
+  </view>
+  <view class="title">
+  四、等待成团中如何退款？
+  </view>
+  <view class="content">
+    拼团有效期后，未达成相应参团人数的要求，则该团失败，系统会自动退款
+  </view>
+</view>

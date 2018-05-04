@@ -1,0 +1,173 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/* 字体 */
+page{
+  font-family: "黑体"
+}
+/*颜色  */
+.allBtn{
+  background-color: #4eba4e;
+  color:#fff;
+}
+page{
+  background-color: #efeff4;
+}
+.bg-white{
+  background-color: #fff;
+}
+.bg-green{
+  background-color: #4eba4e;
+}
+.bg-yellow{
+  background-color: #ffb638;
+}
+.bo-green{
+  border:1px solid #4eba4e;
+}
+.green{
+  color:#4eba4e;
+}
+.gray{
+   color: #b2b2b2;
+   width: 20%;
+}
+.white{
+  color:#fff;
+}
+.input{
+  color:#171717;
+}
+/*结构  */
+.flx{
+  display: flex;
+  display: -webkit-flex;
+}
+.auto{
+  margin:0 auto;
+}
+.bo-btm{
+  border-bottom:none!important;
+}
+.bo-top{
+  border-top:1px solid #bfbfc3;
+}
+.bo-top-hui{
+  border-top:1px solid #e3e3e3;
+}
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/* 字体 */
+page{
+  font-family: "黑体"
+}
+/*颜色  */
+.allBtn{
+  background-color: #4eba4e;
+  color:#fff;
+}
+page{
+  background-color: #efeff4;
+}
+.bg-white{
+  background-color: #fff;
+}
+.bg-green{
+  background-color: #4eba4e;
+}
+.bg-yellow{
+  background-color: #ffb638;
+}
+.bo-green{
+  border:1px solid #4eba4e;
+}
+.green{
+  color:#4eba4e;
+}
+.huiSea{
+  color: #666;
+}
+.gray{
+   color: #b2b2b2;
+   width: 20%;
+}
+.white{
+  color:#fff;
+}
+.input{
+  color:#171717;
+}
+/*结构  */
+.flx{
+  display: flex;
+  display: -webkit-flex;
+}
+.auto{
+  margin:0 auto;
+}
+.bo-btm{
+  border-bottom:none!important;
+}
+.bo-top{
+  border-top:1px solid #bfbfc3;
+}
+.bo-top-hui{
+  border-top:1px solid #e3e3e3;
+}
+/*字体大小  */
+.fon-24{
+  font-size: 24rpx;
+}
+.fon-30{
+  font-size: 30rpx;
+}
+.center{
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.flex{
+  display: flex;
+  display: -webkit-flex;
+}
+.flex1{
+  flex: 1;
+  -webkit-flex:1;
+}
+.between{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.b-center{
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.center{
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+

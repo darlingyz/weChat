@@ -1,0 +1,162 @@
+<view hidden='{{!XiaJia}}'>
+<import src="../../wxParse/wxParse.wxml" />
+<view style="width:100%;height:{{imgHeight}}px;float:left;">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <text style="background-image:url({{item.url}}); height: 100%;width: 100%;background-repeat:round;float:left;" mode="aspectFill"></text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="shijian" style="background-image: url('{{tu.a}}');display:none;">
+  <lable>
+    <!-- {{clock}} {{micro_second}} -->
+  </lable>
+</view>
+<view class="content">
+  <view class="con_01">{{title}}</view>
+  <view class='cc001'><view class='Tao-j white bg-yellow'>套</view> 包含课程：{{model.ParticipateCount}}门</view>
+  <view class='con_04'>
+    ¥{{gprice}}
+    <label>原价:¥{{oprice}}</label>
+  </view>
+</view>
+
+<view class="tu">
+  <view class="shuoming" style="margin-top:2%;">课程简介</view>
+  <video hidden='{{shiping==""}}' src="{{shiping}}" controls style='width:100%;height:500rpx;margin-bottom:15px;'></video>
+  <view class='jianjie'>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>
+
+<view hidden="{{addrephone}}" class="didian">
+  <view class="shuoming" style="margin-top:2%;">上课地点</view>
+  <view class="didian_view" bindtap='dizhi'>
+    <text class="daohang" style="background-image: url('{{tu.c}}');"></text>{{address}}</view>
+  <view class="didian_view" bindtap='zixun'>
+    <text class="shouji" style="background-image: url('{{tu.d}}');"></text>{{phone}}</view>
+</view>
+
+<view class='baohan'>- 包含课程 -</view>
+  <view wx:for="{{col0}}" class='PingTuan bg-white outer-Hj' data-pid="{{item.Id}}" data-type="{{item.Type}}" data-gid="{{item.GroupBookingId}}" data-scount="{{item.ShengCount}}" data-otype="{{item.GroupOrders.Type}}" data-oid="{{item.GroupOrders.Id}}"
+    data-title="{{item.Title}}" data-sheng="{{item.ParticipateCount-item.GropCount}}" bindtap="Ping">
+<!-- 拼团类型 -->
+    <view hidden='{{item.Type!=1}}'>
+      <image class='img-Hj' src='{{item.PicturePath}}' style='height:{{imgHeight}}px'></image>
+      <view class='title-Hj xianzhi'>
+        {{item.Title}}
+      </view>
+      <view class='flex botom-Hj'>
+        <view class='flex'>
+          <view class='AnNiu-Hj' data-pid="{{item.Id}}" data-type="{{item.Type}}" data-gid="{{item.GroupBookingId}}" style='font-size:32rpx;float:left;'>
+            去开团
+          </view>
+          <view>
+            <view>
+              <text class='Price-Hj '>¥{{item.GroupPrice}}   </text> </view>
+            <view class='ceshia'>
+              <text class='YuanJ-Hj '>原价:  </text>
+              <text class=' YuanJ-Hj throught-Hj'>{{item.OriginalPrice}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 砍价类型 -->
+    <view hidden='{{item.Type!=4}}'>
+      <view>
+        <view class='top-top' style='background:url({{item.PicturePath}}) no-repeat;background-size:100% 100%;height:{{imgHeight}}px'>
+          <view class='zhe' hidden='{{item.ShengCount >= 1 && item.IsKanGroupEndTime==0}}'>
+            <view class='mid-btn' hidden='{{item.ShengCount>=1}}' style="margin:auto;margin-top:20%;">本轮已售罄</view>
+
+            <view hidden='{{item.IsKanGroupEndTime==0}}' style='margin-top:20%;'>
+              <view class='kanjiaa'>砍价进行中</view>
+              <view class='kanjiaa'>
+                <text class='baiseku'>{{item.shi}}</text> 小时
+                <text class='baiseku'>{{item.fen}}</text> 分
+                <text class='baiseku'>{{item.miao}}</text> 秒
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='bg-white top-btm'>
+        <view class='title-Hj xianzhi'>
+          {{item.Title}}
+        </view>
+        <view class='flex botom-Hj'>
+          <view class='flex'>
+            <view hidden='{{item.IsKanGroupEndTime!=0}}'>
+              <view hidden='{{item.ShengCount<1}}' class='AnNiu-Hj' style='font-size:34rpx;float:left;'>
+                <text style='font-size:28rpx'>砍到¥</text>{{item.GroupPrice}}
+              </view>
+              <view hidden='{{item.ShengCount>=1}}' class='AnNiu-Hj' style='font-size:34rpx;float:left;background-color:#ababab;'>
+                <text style='font-size:28rpx'>砍到¥</text>{{item.GroupPrice}}
+              </view>
+            </view>
+            <view hidden='{{item.IsKanGroupEndTime==0}}' class='AnNiu-Hj' style='font-size:34rpx;float:left;'>
+              <text style='font-size:30rpx'>查看详情</text>
+            </view>
+            <view style='line-height:73rpx;'>
+              <text class='YuanJ-Hj '>原价:  </text>
+              <text class=' YuanJ-Hj throught-Hj'>{{item.OriginalPrice}}</text>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+     <!-- 优惠类型 -->
+    <view hidden='{{item.Type!=10}}'>
+      <view>
+        <view class='top-top' style='background:url({{item.PicturePath}}) no-repeat;background-size:100% 100%;height:{{imgHeight}}px'>
+        </view>
+      </view>
+      <view class='bg-white top-btm'>
+        <view class='title-Hj xianzhi'>
+          {{item.Title}}
+        </view>
+        <view class='flex botom-Hj'>
+          <view class='RedBao'>
+            <image mode='widthFix' class='money-img' src='{{youhui}}'></image>
+            <text class='Price-Hj' style='float:left;height:100%;padding-left:20rpx;'>¥{{item.GroupPrice}} 
+</text>
+            <text class='YuanJ-Hj' style='float:left;margin-top:13rpx;height:28rpx;'>原价: </text>
+            <text class=' YuanJ-Hj throught-Hj' style='float:left;margin-top:13rpx;height:28rpx;margin-left:14rpx;'>{{item.OriginalPrice}}</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    </view>
+
+
+
+<view style='width:100%;height:130rpx;float:left;'></view>
+
+<view class="guding">
+  <view class="gun1" bindtap="fanhui">
+    <text style="background-image: url('{{tu.e}}');"></text>
+  </view>
+  <view class="gun2" bindtap="zixun">
+    <text style="background-image: url('{{tu.f}}');"></text>
+  </view>
+  <view class="gun4" data-kid="{{kid}}" bindtap="{{yu}}">
+    <text class="gun_text">立即购买</text>
+  </view>
+</view>
+
+</view>
+
+<view hidden='{{XiaJia}}'>
+  <view>
+    <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+  </view>
+  <view class='baoqian'>抱歉，该课程已下架，
+    <text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text>
+  </view>
+</view>

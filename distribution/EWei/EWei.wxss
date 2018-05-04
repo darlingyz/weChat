@@ -1,0 +1,21 @@
+/* distribution/EWei/EWei.wxss */
+.imgs{
+  width: 364rpx;
+  display: block;
+  margin: 60rpx auto 50rpx auto;
+}
+.title{
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+  height: 84rpx;
+  background-color: #4eba4e;
+  line-height: 84rpx;
+}
+.outer{
+  width: 672rpx;
+  margin: auto;
+  background-color: #fff;
+  padding-top: 1rpx;
+  margin-top: 60rpx;
+}

@@ -1,0 +1,79 @@
+<!--newpage/envelope/envelope.wxml-->
+<view class='outer' style='background-color:{{mm.BackgroundColor}}'>
+
+  <view bindtap='OpenModelTwo' class='detal'>活动规则</view>
+<view >
+
+  <image src='{{backimg}}' mode='widthFix'  class='outer-top'></image>
+</view>
+<view class='AllDing'>
+<view class='time DingWeia'>{{mm.StartTime}} 至 {{mm.EndTime}}</view>
+<view class='outer-middle'>
+  
+  <view class='img-all'>
+    <view class='big'>
+      <view class='img-mid dingWei' style='background:url({{imgbg}}) no-repeat; background-size:100% 100%'>
+        <view class='Team'>团长</view>
+      </view>
+    </view>
+    <view class='big' wx:for="{{headlist}}">
+      <view  bindtap='TextShow' class='img-mid' style='background:url({{item.im}}) no-repeat; background-size:100% 100%'></view>
+    </view>
+  </view>
+  <view class='people' hidden='{{mm.EnvelopeSplits.Type!=1}}'>
+    还差{{sheng}}人即可瓜分{{mm.Price}}元红包，快邀好友来拆
+  </view>
+  <view class='daoJi' hidden='{{mm.EnvelopeSplits.Type!=1}}'>
+    {{clock}}
+  </view>
+  <view class='daoJi' style='margin-top:40rpx;' hidden='{{mm.EnvelopeSplits.Type!=3}}'>
+    红包已过期
+  </view>
+  <view class='daoJi' hidden='{{mm.EnvelopeSplits.Type!=2}}'>
+    红包已拆完
+  </view>
+  <view class='button'>
+    <button bindtap='OpenModel' open-type="share" hidden='{{mm.EnvelopeSplits.Type!=1}}'>邀请朋友一起拆</button>
+    <button hidden='{{!chainew}}' bindtap='kecheng'>红包课程</button>
+    <button hidden='{{chainew}}' bindtap='chainew' >拆一个新红包</button>
+  </view>
+</view>
+</view>
+</view>
+
+
+
+<!--<view hidden='{{!model}}' class='model'>
+    <view style='background:url({{bgRed}}) no-repeat;background-size:100% 100%' class='model-mid'>
+        <view>您已获得一个红包，还差<text class='num'>3</text>人即可拆开赶快邀请好友，一起瓜分50元</view>
+        <view>50</view>
+        <view>元</view>
+        <view>
+          <button >邀请好友一起拆</button>
+        </view>
+    </view>
+    <view class='icon'>
+      <icon bindtap='CloseModel'  type="cancel" color='rgba(255,255,255,0.8)' size="40"/>
+     </view>
+</view>-->
+
+
+<view hidden='{{modelTwo}}' class='model-two'>
+  <view class='two-mid'>
+    <view>
+      <image class='img-two' src='{{xian}}' mode='widthFix'></image>活动规则<image class='img-two img-right' src='{{xian2}}' mode='widthFix'></image>
+    </view>
+    <view>1、用户可邀请好友共同拆红包，满人则拆红包成功，共同瓜分相应金额的红包，每人获得红包金额随机；其中随机一人将获得“手气最佳红包”。</view>
+    <view>2、每个红包发起后{{mm.WaitTime}}小时未组满即失败，无红包奖励。</view>
+
+    <view>3、活动期间，帮助同一用户只可拆一次，但发起红包次数不限。</view>
+    <view>4、发起拆红包的用户需在该红包满人拆成功后或逾期失败后，才可再发起拆下一个红包。</view>
+  </view>
+  <view class='icon'>
+    <icon bindtap='CloseModelTwo'  type="cancel" color='rgba(255,255,255,0.8)' size="40"/>
+  </view>
+</view>
+
+<view hidden='{{setmine}}' class='ShoZi'>
+  你已帮他拆过红包
+</view>

@@ -1,0 +1,131 @@
+<view class='container'>
+  <view class="userinfo">
+    <view style="width:100%;height:212rpx;float:left;">
+      <image class="userinfo-avatar" src="{{userInfo.AvatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="spa">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <view class='outer-Bao'>
+    <view wx:for='{{myInfo}}' wx:key='{{index}}' bindtap='{{item.bindtap}}' class='MyBao bg-white'>
+      <view>{{item.title}}</view>
+      <view class='center-a'>{{item.info}}
+        <image class='baoimg' mode='widthFix' src='{{jiantou}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class="contar-footer">
+    <view class="classname">我报名的课程</view>
+  </view>
+</view>
+
+<view class='bg-white in-top' wx:for="{{myCourList}}" wx:key='{{*this}}' style='height:284rpx;border-bottom:1px solid #e0e0e0;'>
+  <view class="success green" wx:if='{{item.Status=="2"}}'>
+    <view wx:if='{{item.Course.Type=="1"}}'>
+      拼团失败
+      <lable style="float:right;margin-right:1%;color:#9f9f9f;">退款完成</lable>
+    </view>
+    <view wx:if='{{item.Course.Type=="4"}}'>
+      砍价失败
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.Status=="0"}}'>
+    <view class="classname" wx:if='{{item.Course.Type=="1"}}'>
+      拼团中，还差{{item.ccount}}人成团
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="4"}}'>
+      砍价中，还差{{item.ccount}}人到底价
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.Status=="1"}}'>
+    <view wx:if='{{item.GroupType=="1"}}'>
+      拼团成功
+    </view>
+    <view wx:if='{{item.GroupType=="0"}}'>
+      购买成功
+    </view>
+    <view wx:if='{{item.GroupType=="2"}}'>
+      砍价成功
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.GroupOrdersType=="1"}}'>
+    <view class="classname" wx:if='{{item.Course.Type=="5"}}'>
+      抢购成功
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="10"}}'>
+      购买成功
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="6"}}'>
+      答题成功
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="11"}}'>
+      领取成功
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="12"}}'>
+      购买成功
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.GroupOrdersType=="2"}}'>
+    <view class="classname" wx:if='{{item.Course.Type=="5"}}'>
+      等待支付
+    </view>
+    <view class="classname" wx:if='{{item.Course.Type=="6"}}'>
+      等待领取
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.GroupOrdersType=="3"}}'>
+    <view class="classname" wx:if='{{item.Course.Type=="6"}}'>
+      答题失败
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.IsRedOrder==1}}'>
+    <view class="classname" wx:if='{{item.RedOrderType=="1"}}'>
+      购买成功
+    </view>
+    <view class="classname" wx:if='{{item.RedOrderType=="2"}}'>
+      等待支付
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.IsCoupOrder=="1"}}'>
+    <view class="classname" wx:if='{{item.CoupOrderType=="1"}}'>
+      购买成功
+    </view>
+    <view class="classname" wx:if='{{item.CoupOrderType=="2"}}'>
+      等待支付
+    </view>
+  </view>
+  <view class="success green" wx:if='{{item.IsDistOrder=="1"}}'>
+    <view class="classname" wx:if='{{item.DistOrderType=="1"}}'>
+      购买成功
+    </view>
+    <view class="classname" wx:if='{{item.DistOrderType=="2"}}'>
+      等待支付
+    </view>
+  </view>
+  <view class="top" style='float:left;' data-status="{{item.Status}}" data-orderstype="{{item.GroupOrdersType}}" data-types="{{item.Course.Type}}" data-Id="{{item.Id}}" data-card="{{item.GroupOrderCard}}" data-cid="{{item.Course.Id}}" data-title="{{item.Course.Title}}"
+    bindtap="xiangxi">
+    <view class='center  flex'>
+      <view style='float:left;width:40%;'>
+        <image mode='widthFix' class='se_imh' src="{{pingimg}}" wx:if='{{item.Course.Type=="1"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{kanimg}}" wx:if='{{item.Course.Type=="4"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{yiimg}}" wx:if='{{item.Course.Type=="5"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{dati}}" wx:if='{{item.Course.Type=="6"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{hongbao}}" wx:if='{{item.Course.Type=="7"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{youhui}}" wx:if='{{item.Course.Type=="8"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{shiting}}" wx:if='{{item.Course.Type=="11"}}'></image>
+        <image mode='widthFix' class='se_imh' src="{{taocan}}" wx:if='{{item.Course.Type=="12"}}'></image>
+        <image class='image' style='height:144rpx;' src="{{item.Course.PicturePath}}"></image>
+      </view>
+      <view style='float:left;width:50%;margin-left:3%;'>
+        <view class="cen_right">
+          <view class="cen_r1">{{item.Course.Title}}
+          </view>
+          <view class="cen_r2">¥{{item.Price}}
+            <label>¥{{item.Course.OriginalPrice}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

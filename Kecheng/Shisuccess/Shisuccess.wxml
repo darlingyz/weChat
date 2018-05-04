@@ -1,0 +1,51 @@
+<!--success.wxml-->
+<view class="top" bindtap="kecheng">
+  <view class="center">
+    <text class="cen_img" style="background-image: url('{{img}}');"></text>
+    <view class="cen_right">
+      <view class="cen_r1">{{title}}
+      </view>
+
+      <view class="cen_r2">¥{{gprice}}
+        <label>¥{{oprice}}</label>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="footer" hidden='{{zhi=="0"}}'>
+  <view class="footer-top">
+    <image class="img-su" src="{{cheng}}"></image>
+    <label hidden='{{goumai}}' >恭喜您,领取成功！</label>
+  </view>
+</view>
+
+<view class="su-footer bg-white" hidden='{{zhi=="1"}}'>
+<view class='kanjiacss' style='padding-top:20rpx;'>订单号： {{model.Number}}</view>
+<view class='kanjiacss'>领取时间： {{model.StartTime}}</view>
+</view>
+
+<view class="last bg-white" hidden="{{xian}}">
+  <view class="su-footer-top">
+    <view class="su-specal">
+      上课地点
+    </view>
+  </view>
+  <view class="last-bottom" bindtap='dizhi'>
+    <view class="helpless">
+      <image mode="widthFix" class="last-img " src="{{ding}}"></image>
+    </view>
+    <view class="helptext">
+      {{address}}
+    </view>
+  </view>
+  <view class="last-bottom" bindtap='zixun'>
+    <view class="helpless">
+      <image mode="" class=" last-last last-img " src="{{shou}}"></image>
+    </view>
+    <view class="helptext">
+      {{phone}}
+    </view>
+  </view>
+</view>
+
+  <view bindtap="shouye" class="fanh">去首页逛逛</view>

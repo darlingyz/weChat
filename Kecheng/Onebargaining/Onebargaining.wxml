@@ -1,0 +1,171 @@
+<view hidden='{{!XiaJia}}'>
+<import src="../../wxParse/wxParse.wxml" />
+<!--Kecheng/bargaining/bargaining.wxml-->
+<view class='all-all'>
+  <view class='outer'>
+    <view class='top' style='background:url({{movies[0].url}}) no-repeat;background-size:100% 100%;border-bottom-left-radius:40%;border-bottom-right-radius:40%;'>
+      <view class='zhe'>
+        <view class='top-top1'>{{title}}</view>
+        <view class='top-middle'>{{jie}}</view>
+        <view class='top-footer'>{{groupcount}}人已参加</view>
+      </view>
+    </view>
+    <!--头部  -->
+    <view class='qingkan'>
+      <view style="font-size:37rpx;font-weight: bold;">请朋友帮忙砍价 就有机会砍到¥{{gprice}}</view>
+      <view>速度邀请好友帮忙砍到最低价吧</view>
+    </view>
+    <view>
+      <view class='dingwei'>
+        <view class='sanjiao' style='background:url({{imgd}}) no-repeat;background-size:100%'>{{rpricecount}}人可砍到
+
+        </view>
+        <view class='sanjiao saojiaoa' style='background:url({{imgd}}) no-repeat;background-size:100%'>{{gpricecount}}人可砍到</view>
+        <image class='middle-mi' src='{{jindu}}' mode='widthFix' style='width:70%;margin-bottom:2%;'></image>
+        <view class='buton'>
+          <view>
+            <view class='mingzia'>原价</view>
+            <view class='jiqiana'>¥{{oprice}}</view>
+          </view>
+          <view>
+            <view class='mingzia zhekou'>折扣价</view>
+            <view class='jiqiana'>¥{{rprice}}</view>
+          </view>
+          <view>
+            <view class='mingzia dijia'>底价</view>
+            <view class='jiqiana'>¥{{gprice}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <!--  -->
+    <view>
+      <view class='fenxiangaa'>
+        <view bindtap='CircleFriends' class='penyouquan'>分享朋友圈</view>
+        <button open-type="share" class='haoyouka' style='font-size:30rpx;width:48.5%;line-height:104rpx;background-color:#4eba4e;color:white;'>召唤好友砍价</button>
+      </view>
+      <view class='maikecheng' data-gid="{{kid}}" data-types="0" bindtap="{{yu}}">
+        ¥{{oprice}}立即购买
+      </view>
+    </view>
+
+  </view>
+
+  <view class='outer '>
+    <view class='kanjiuliu'>- 砍价流程 -</view>
+    <view>
+      <image class='lichengaa' src='{{liucheng}}' mode='widthFix'></image>
+      <view class='fenxiang'>
+        <view>分享</view>
+        <view>朋友砍价</view>
+        <view>砍价/看到折扣价/低价</view>
+        <view>砍价折/折扣价/低价购买
+        </view>
+      </view>
+    </view>
+    <view class='kanjiuliu'>- 课程详情 -</view>
+        <video hidden='{{shiping==""}}' src="{{shiping}}" controls style='width:100%;height:500rpx;margin-bottom:15px;'></video>
+    <view class='guizeaa'>
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+    <view class='yuxia' style='display:none;'>
+      展开余下活动规则
+      <image src='{{xiala}}' mode='widthFix'></image>
+    </view>
+  </view>
+
+  <view hidden="{{addrephone}}" class="didian">
+    <view class="shuoming" style="margin-top:2%;">上课地点</view>
+    <view class="didian_view" bindtap='dizhi'>
+      <text class="daohang" style="background-image: url('{{tu.c}}');"></text>{{address}} </view>
+    <view class="didian_view" bindtap='zixun'>
+      <text class="shouji" style="background-image: url('{{tu.d}}');"></text>{{phone}} </view>
+  </view>
+
+  <view class="caini" hidden='{{like.length<1}}'>
+    - 猜你喜欢 -
+  </view>
+
+  <!-- 猜你喜欢 -->
+  <!-- <view class='mianfei-top' wx:for="{{like}}" data-cid='{{item.Id}}' bindtap='likekan'>
+    <view>
+      <view class='top-top' style='background:url({{item.PicturePath}}) no-repeat;background-size:100% 100%'>
+        <image class='tubiao' src='{{xinpin}}' mode='widthFix'>
+        </image>
+      </view>
+      <view></view>
+    </view>
+    <view class='top-btm'>
+      <view style='width:70%'>
+        <view class='fon-36'>{{item.Title}}</view>
+        <view class='mid-zho'>{{item.Introduce}}</view>
+        <view class='la-zho'>{{item.GropUserCount}}人已参与</view>
+      </view>
+      <view>
+        <view class='yuanjia'>原价：¥
+          <text class='linthrou'>{{item.GroupPrice}}</text>
+        </view>
+        <view class='kanjia green' data-cid='{{item.Id}}' bindtap='likekan'>
+          <text class='text-zho '>砍到</text>¥{{item.OriginalPrice}}</view>
+      </view>
+    </view>
+  </view> -->
+
+  <view class='mianfei-top' wx:for="{{like}}" data-cid='{{item.Id}}' bindtap='likekan'>
+    <view>
+      <view class='top-top' style='background:url({{item.PicturePath}}) no-repeat;background-size:100% 100%'>
+      </view>
+    </view>
+    <view class='bg-white'>
+      <view class='title-Hj xianzhi'>
+        {{item.Title}}
+      </view>
+      <view class='botom-Hj'>
+        <view>
+          <view class='AnNiu-Hj' style='font-size:34rpx;float:left;'>
+            <text style='font-size:28rpx'>砍到¥</text>{{item.GroupPrice}}
+          </view>
+          <view style='line-height:73rpx;'>
+            <text class='YuanJ-Hj '>原价:  </text>
+            <text class=' YuanJ-Hj throught-Hj'>{{item.OriginalPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='float:left;width:100%;height:130rpx;'></view>
+  <view data-gid="{{gid}}" data-types="0" class='lastaa flex' style='position: fixed;left: 0px;bottom: 0px;border-top:1px solid #e3e3e3;'>
+    <view bindtap="{{yu}}" style='width:40%;color:#7d7d7d;background-color: white;font-size:28rpx;'>¥{{oprice}} 立即购买</view>
+    <button type="primary" open-type="share" class='green white teshu' style='width:42%;font-size:13.5px;padding:0rpx;background-color:#4eba4e;line-height:95rpx;border-radius:0rpx;'>召唤朋友 砍到¥{{gprice}}</button>
+    <view class='green seal' style='width:18%' bindtap='CircleFriends'>
+      <image class='image-las' src='{{penyouquan}}' mode='widthFix'></image>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view hidden='{{show}}' class='fenxiangaaa'>
+  <view class='fenxunaa' style='background:url({{haibao}}) no-repeat;background-size:100%;'>
+    <view class='changana' style='position:absolute;left:133rpx;bottom:57rpx;'>保存海报图片后可分享到朋友圈</view>
+    <view class='haibaoaa green white' bindtap='baocun'> 保存海报</view>
+    <view class='chacha' bindtap='CircleFriends'> x</view>
+  </view>
+</view>
+
+</view>
+
+<view hidden='{{XiaJia}}'>
+  <view>
+    <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+  </view>
+  <view class='baoqian'>抱歉，该课程已下架，
+    <text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text>
+  </view>
+</view>

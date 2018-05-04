@@ -1,0 +1,62 @@
+<view class="top" bindtap="kaituan">
+  <view class="center">
+    <text class="cen_img" style="background-image: url('{{img}}');"></text>
+    <view class="cen_right">
+      <view class="cen_r1">{{title}}</view>
+      <view class="cen_r2">¥{{gprice}}
+        <label>¥{{oprice}}</label>
+      </view>
+      <!-- <view class="cen_r3">
+        <text>省¥{{sprice}}</text>
+      </view> -->
+    </view>
+  </view>
+</view>
+<view class="outer-middle">
+  <view class="max">
+    <view class="triangle-up"></view>
+    <view class="center_c">
+      <view class="cen_1" hidden="{{status!=2}}">还差<label>{{ucount}}</label>人,拼团失败</view>
+      <view class="cen_1" hidden="{{status!=1}}" style="padding-bottom:5%;">已有{{pcount}}人参加，<text style="color:#4eba4e;">拼团成功</text></view>
+      <view class="cen_1" hidden="{{status!=0}}">还差<label>{{ucount}}</label>人，快喊小伙伴一起拼团吧</view>
+      <view class="cen_time" hidden="{{status!=0}}">{{clock}} {{micro_second}}</view>
+      <view class="cen_ren">
+        <view class="ren_max1">
+          <image class="tuan-img" src="{{MaxavatarUrl}}"></image>
+          <view>团长</view>
+        </view>
+        <view class="ren_max" wx:for="{{yuan}}">
+          <image class="dengdai" src="{{item.im}}" style="border-radius:50%"></image>
+        </view>
+      </view>
+    </view>
+    <view class="last" hidden="{{status!=0}}">
+      <button bindtap="cantuan" type="primary" hidden="{{a}}">我要参团</button>
+      <button class="green bo-green" open-type="share">分享给好友来拼团</button>
+    </view>
+    <view class="last" hidden="{{status!=1}}">
+      <button bindtap="kaituan" type="primary">我也来开这个团</button>
+    </view>
+    <view class="last" hidden="{{status!=2}}">
+      <button bindtap="kaituan" type="primary">我来重开这个团</button>
+    </view>
+    <view class="last" hidden="{{status!=3}}">
+      <button bindtap="shouye" type="primary">去首页逛逛</button>
+    </view>
+  </view>
+</view>
+<view class="pingtuan">
+  <view class="pingtuan-top">
+    <view class="xian">
+      课程吧拼团
+    </view>
+
+  </view>
+  <view class="piantuan-footer">
+    <view class="detail-left">支付开团邀请{{ucount}}人参团，人数不足自动退款</view>
+    <view class="xiangxiguize" bindtap='xiang'>
+      详细规则
+      <image class="jiao" mode="widthFix" src="{{jiao}}"></image>
+    </view>
+  </view>
+</view>

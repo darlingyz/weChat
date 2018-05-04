@@ -1,0 +1,16 @@
+/* distribution/XiaJia/XiaJia.wxss */
+page{
+  background-color: #fff;
+}
+.img{
+  width: 200rpx;
+  margin:206rpx auto 64rpx auto;
+  display: block;
+}
+.baoqian{
+  font-size: 30rpx;
+  text-align: center;
+}
+.shouYe{
+  color: #4eba4e;
+}

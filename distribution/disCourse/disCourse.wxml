@@ -1,0 +1,41 @@
+<!--distribution/disCourse/disCourse.wxml-->
+
+<view class='flx nav bg-white'>
+  <view bindtap='YongJing' class='nav-top'>
+      <view class='Jin'>佣金(元)</view>
+      <view>{{mony}}</view>
+  </view>
+  <view bindtap='YinYeE' class='nav-top'>
+      <view class='Jin'>营业额(元)</view>
+      <view>{{lines}}</view>
+  </view>
+  <view bindtap='GouRenR' class='nav-top'>
+      <view class='Jin'>购买人数</view>
+      <view>{{num}}</view>
+  </view>
+  <view bindtap='LiuLan' class='nav-top'>
+      <view class='Jin'>浏览人次</view>
+      <view>{{sum}}</view>
+  </view>
+</view> 
+
+<view wx:for="{{list}}" class='flx middlle' >
+  <view bindtap='XIangQing' data-lid='{{item.Id}}' data-id='{{item.CourseId}}'>
+    <image mode='widthFix' class='imgs' src='{{url}}{{item.Course.PicturePath}}'></image>
+  </view>
+  <view class='s-dis'>
+    <view class='title' bindtap='XIangQing' data-lid='{{item.Id}}' data-id='{{item.CourseId}}'>{{item.Course.Title}}</view>
+    <view class='flx detail JieGou' bindtap='XIangQing' data-lid='{{item.Id}}' data-id='{{item.CourseId}}'>
+      <view><text class='ShouJia'>售价:</text>￥{{item.Price}}</view>
+      <view><text class='ShouJia'>原价:</text>￥{{item.Course.OriginalPrice}}</view>
+    </view>
+    <view class='flx detail'>
+      <view bindtap='XIangQing' data-lid='{{item.Id}}' data-id='{{item.CourseId}}'><text class='ShouJia'>佣金:</text>￥{{item.zhuanPrice}}</view>
+      <view ><button  data-id='{{item.CourseId}}'  open-type="share" class='btn'>去推广</button></view>
+    </view>
+  </view>
+</view>
+
+<loading hidden="{{hidden}}">
+  加载中...
+ </loading>

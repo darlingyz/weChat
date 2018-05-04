@@ -1,0 +1,93 @@
+/* distribution/Incomedetails/Incomedetails.wxss */
+.nav{
+  height: 90rpx;
+  align-items: center;
+  -webkit-align-items: center;
+  background-color: #fff;
+  padding:0 42rpx;
+}
+.top{
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  border-right: 1rpx solid #e7e7e7;
+}
+.ErDu{
+  font-size: 24rpx;
+  color: #ababab;
+  display: inline-block;
+  margin-right: 26rpx;
+}
+.top2{
+  border-right: 0;
+  padding-left: 42rpx;
+}
+.imgs{
+  width: 282rpx;
+  margin-right: 32rpx;
+}
+.middlle{
+  padding:28rpx 30rpx 20rpx 30rpx;
+  background-color: #fff;
+ 
+}
+.title{
+  font-size: 30rpx;
+}
+.detail{
+  font-size: 24rpx;
+  color:#4eba4e;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.ma-top{
+  margin-top: 20rpx;
+}
+.JieGou{
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+}
+.detail view{
+  width: 50%;
+}
+.ShouJia{
+  color: #ababab;
+}
+.imgss{
+  width: 34rpx;
+  margin-right: 22rpx;
+  margin-left: 28rpx;
+}
+.time{
+  margin-right: 30rpx;
+  color: #9d9d9d;
+}
+.nat-top{
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 73rpx;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  font-size: 24rpx;
+}
+.spe{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-fjustify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.Specal-s{
+  flex: 1;
+  -webkit-flex:1;
+}
+.noke{
+  width: 100%;
+  text-align: center;
+  margin-top: 60%;
+  color: #ababab;
+}

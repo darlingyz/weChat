@@ -1,0 +1,5 @@
+<!--distribution/XiaJia/XiaJia.wxml-->
+<view>
+  <image class='img' mode='widthFix' src='{{xiajia}}'> </image>
+</view>
+<view class='baoqian'>抱歉，该课程已下架，<text class='shouYe'>去首页逛逛吧！</text></view>

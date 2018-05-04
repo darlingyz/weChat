@@ -1,0 +1,31 @@
+<!--newpage/customer/customer.wxml-->
+<view hidden='{{!XiaJia}}'>
+<view class='bg-white outer'>
+  <view>
+    <image mode='widthFix' class='img-top' src='{{AnswerImg}}'></image>
+  </view>
+  <view class='caichengyu'>
+    {{title}}
+  </view>
+</view>
+
+<view class='bg-white footer'>
+    <view wx:for="{{list}}"  >
+        <view bindtap='chose'  class=' footer-top flx' data-index='{{index}}'>
+          <view class='{{item.Choose}} bg-hui'>{{item.letter}}</view>
+          <view>{{item.title}}</view>
+        </view>
+    </view>
+</view>
+<view class='Tijiao' bindtap='tijiao'>提交答题</view>
+
+</view>
+
+<view hidden='{{XiaJia}}'>
+  <view>
+    <image class='img' mode='widthFix' src='{{xiajiatu}}'> </image>
+  </view>
+  <view class='baoqian'>抱歉，该课程已下架，
+    <text bindtap='ShouYua' class='shouYe'>去首页逛逛吧！</text>
+  </view>
+</view>

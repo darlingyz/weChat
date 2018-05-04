@@ -1,0 +1,12 @@
+<!--newpage/answer/answer.wxml-->
+<view><image class='images' mode='widthFix' src='{{tutu}}'></image></view>
+
+<view class='footer'>
+    <view class='buzhengque'>您的答案不正确</view>
+    <view class='bie'>别气馁，去其他答题赢课试试吧！</view>
+
+    <view>
+      <button bindtap='fan' class='bg-green white'>去答题赢课列表</button>
+      <button open-type="share" class='bg-white green bo-green'>分享好友答题赢课</button>
+    </view>
+</view>

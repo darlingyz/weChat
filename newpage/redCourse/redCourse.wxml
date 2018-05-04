@@ -1,0 +1,25 @@
+<!--newpage/redCourse/redCourse.wxml-->
+<view>
+  <view class='flx outer-top center' bindtap='chaibao'>
+      <view class='center'>
+        <image class='img-top' src='{{redbao}}' mode='widthFix'></image>
+        <text>红包余额</text>
+        <text class='money'>¥{{redpp}}</text>
+      </view>
+      <view class='center'>
+        去拆红包<image class='img-r' src='{{jiantou}}' mode='widthFix'></image>
+      </view>
+  </view>
+  <view class='wuwu' hidden='{{list.length!=0}}'>暂无优惠课程</view>
+<view wx:for="{{list}}" class='bg-white outer-middle' data-cid='{{item.Id}}' bindtap='tiaozhuan'>
+  <view>
+    <view class='middle-img' style='background:url({{item.PicturePath}}) no-repeat;background-size:100% 100%;height:{{imgHeight}}px'></view>
+  </view>
+  <view class='title'>{{item.Title}}</view>
+  <view class='price'><text>¥{{item.jianprice}}</text><text class='OriginalPrice'>原价:<text class='YangShi'>{{item.OriginalPrice}}</text></text></view>
+  <view class=' RedBao'><image mode='widthFix' class='money-img' src='{{imgbg}}'></image>
+        <view class='allred'>已抵扣¥ {{item.jian}}元</view>
+        <view>本课程最多使用红包¥{{item.RetailPrice}}元</view>
+  </view>
+</view>
+</view>

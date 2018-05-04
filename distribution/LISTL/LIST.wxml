@@ -1,0 +1,10 @@
+<!--distribution/LIST/LIST.wxml-->
+<view class='noke' wx:if="{{list.length==0}}">暂无浏览记录</view>
+<view wx:if="{{list.length>0}}" wx:for="{{list}}" wx:key='{{item.Id}}' class='flx footer' data-cid="{{item.CourseId}}" bindtap='kecheng'>
+  <view class='center'>
+    <image class='imgT' mode='widthFix' src='{{item.Users.AvatarUrl}}'></image> {{item.Name}}
+  </view>
+  <view class='center fooar'>
+    {{item.CreateOn}} 浏览了课程
+  </view>
+</view>
